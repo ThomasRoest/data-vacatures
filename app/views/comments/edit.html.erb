@@ -1,0 +1,9 @@
+<% provide(:title, (t :comments_edit_title)) %>
+<div class="box l-show-post">
+	<h1 class="text-center"><%= (t :comments_edit_title) %></h1>
+	<div class="comment-form">
+	<%= simple_form_for([@post, @comment]) do |c| %>
+		<%= c.input :content, input_html: {class: "input-default"} %>
+		<%= c.button :submit, class: "btn btn-default-submit btn-success" %>
+	<% end %>
+</div>

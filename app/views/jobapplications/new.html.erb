@@ -1,0 +1,22 @@
+<% provide(:title, (t :jobapplications_new_title)) %>
+<div class="form-container">
+	<div class="text-center">
+		<h1><%= @job.title %></h1>
+		<h2><%= @job.company %></h1>
+		<hr><%= @job.place %></h3><hr>
+	</div>
+	<h3 class="text-center"><%= (t :jobapplications_new_title) %></h3>
+		<%= simple_form_for [@jobapplication], html: {novalidate: true},defaults: { input_html: { class: 'input-default' } } do |f| %>
+			<%#= f.error_notification %>
+			<%= f.input :job_id, input_html: { value: @job.id }, as: :hidden %>
+			<%= f.input :name, autofocus: true %>
+			<%= f.input :email %>
+			<%= f.input :content, as: :text, input_html: { class: 'input-text-jobapplication'} %><br>
+			<%= f.input :linkedin_url %>
+			<p class="timestamp">Documenten (pdf/word formaat)</p>
+
+			<%= f.input :cv %>
+			<%= f.input :letter %>
+			<%= f.button :submit, class: 'btn btn-default-submit btn-success'%>
+		<% end %>
+</div>

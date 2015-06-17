@@ -1,0 +1,3 @@
+en: 
+  flash_jobapplications_create: "Application sent!"
+  flash_jobapplications_error: "Could not be sent, please check all the required information."

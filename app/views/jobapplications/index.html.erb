@@ -1,0 +1,27 @@
+<div class="box l-generic">
+	<div>
+		<%= form_tag(jobapplications_path, :method => "get", id: 'search-form', class: 'search-form-container') do %>
+		  <%= search_field_tag :search, params[:search], placeholder: 'zoeken', class: 'input-search' %>
+		  <%#= submit_tag "Zoeken", :name => nil, class: "btn btn-search btn-primary" %>
+		  <button type="submit" class="btn btn-search btn-primary"><%= icon('search') %></button>
+		<% end %>
+</div><br>
+
+
+<%#= debug @jobapplication %>
+
+<% @jobapplications.each do |a| %>
+<ul class="ul-basic ul-nostyle">
+  <li><h2><%= link_to "Sollicitatie # " + "#{a.id}", a %></h2></li>
+  <li>Naam: <%= a.name %></li>
+  <li>Vacature: <%= link_to a.job.title, a.job %></li>
+  <li>User: <%= link_to a.user.name, a.user %></li><hr>
+</ul>
+
+<%#= debug a.job %>
+<%#= debug a.user %>
+
+<% end %>
+
+</div>
+

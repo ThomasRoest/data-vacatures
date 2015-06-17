@@ -1,0 +1,14 @@
+nl:
+  activerecord:
+    models:
+      user:
+    attributes:
+      user:
+        name: 'naam'
+        email: 'email'
+        password: 'wachtwoord'
+        password_confirmation: 'wachtwoord bevestiging'
+  flash_users_create: "Account aangemaakt"
+  flash_users_update: "Account gewijzigd"
+  flash_users_delete: "Account verwijdered"
+  flash_users_activate: "De link om je account te activeren is verzonden naar het opgegeven email adres"

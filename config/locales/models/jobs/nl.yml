@@ -1,0 +1,32 @@
+nl:
+  activerecord:
+    models:
+      job:
+    attributes:
+      job:
+        company: 'bedrijf'
+        place: 'plaats'
+        summary: 'samenvatting'
+        description: 'omschrijving'
+        title: 'functietitel'
+        avatar: 'logo'
+        avatar_file_size: 'logo:'
+        avatar_file_name: 'Type bestand logo'
+        avatar_content_type: 'Het type bestand is niet geldig, voeg een jpeg of png bestand toe.'
+    errors:
+      models:
+        job:
+          attributes:
+            avatar:
+              in_between: 'mag niet groter zijn dan 10mb'
+            avatar_file_size:
+              in_between: 'het logo bestand is te groot'
+                # in_between: 'mog kut'
+  flash_jobs_create: "Vacature geplaatst"
+  flash_jobs_error: "Kon niet worden geplaatst, controleer alle velden."
+  flash_jobs_update: "Vacature aangepast"
+  flash_jobs_delete: "Vacature verwijderd"
+
+
+
+

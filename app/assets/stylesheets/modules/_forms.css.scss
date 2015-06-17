@@ -1,0 +1,178 @@
+.form-container {
+  border: 1px solid #ecf0f1;
+  box-shadow: $box-shadow;
+  background: #fff;
+  border-radius: 3px;
+  padding: 0em 2em 2em;
+  max-width: 500px;
+  margin: 0 auto 0.5em;
+}
+
+.form-panel {
+  margin: 0 auto 0.5em;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.form-panel-job {
+  margin: 0 auto 0.5em;
+  max-width: 650px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.form-panel-heading {
+  padding: 10px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  h1 {
+    margin: 0;
+  }
+}
+.form-panel-body {
+  padding: 15px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.form-panel-footer {
+  padding: 15px;
+  background: #ECEFF1;
+}
+
+.form-container-job {
+  background-color: #fff;
+  border: 1px solid #ecf0f1;
+  border-radius: 3px;
+  padding: 2em 2em 2em;
+  max-width: 960px;
+  margin: 0 auto 10px;;
+  box-shadow: 1px 1px 7px #cccccc;
+}
+
+.comment-form {
+  max-width: 500px;
+}
+.input-default {
+  border-radius: 3px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  display: block;
+}
+.label-margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.date-field {
+  border-radius: 3px;
+}
+
+#error_explanation {
+  color: #000;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+.white-label {
+  label {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+  }
+}
+.stats {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: auto;
+  padding: 1em;
+  a {
+    margin-right: 5px;
+  }
+}
+
+.topic-stats {
+  margin: 0 auto 15px;
+}
+
+.checkbox {
+  width: auto;
+  margin-left: 0;
+}
+
+.checkbox-jobs {
+  width: auto;
+}
+
+.title-form {
+  font-size: 1.5em;
+}
+.cc-icons {
+  margin-bottom: 1em;
+  img {
+    height: 35px;
+  }
+}
+
+.form-errors {
+  color: #E53935;
+  font-weight: bold;
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+.checkbox-container {
+  margin: 2em 0 2em 0;
+  h3 {
+    display: inline;
+  }
+}
+
+.input-text-jobapplication {
+  height: 170px;
+}
+
+.job_avatar {
+  margin-top: 2em;
+}
+
+.search-form-container {
+  .input-search {
+    max-width: 15em;
+    height: 10px;
+    border-radius: 3px;
+    color: #000;
+  }
+}
+.char-counter {
+  padding: 0.4em;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  color: #fff;
+}
+.char-counter-error {
+  background-color: red;
+}
+.charcountleft {
+  margin: 0 0 15px 0;
+}
+
+
+@media screen and (min-width: 768px) {
+  .form-panel-heading,
+  .form-panel-body,
+  .form-panel-footer {
+    padding: 2em;
+  }
+  .form-container {
+   padding: 2em 2em 2em;
+  }
+  .sort-select {
+    &:hover {
+      cursor: pointer;
+      background-color: #f9f9f9;
+  }
+ }
+}

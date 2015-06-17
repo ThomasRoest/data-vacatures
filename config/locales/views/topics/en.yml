@@ -1,0 +1,26 @@
+en:
+#user form fields
+  simple_form:
+    labels:
+      topic:
+        name: "topic name"
+    placeholders:
+      topic:
+        name: "topic name"  
+  #user buttons
+  helpers:
+    submit:
+      topic:
+        create: "Create topic"
+        update: "Save Changes"
+  #form titles 
+  topics_new_title: "New topic"    
+  topics_index_title: "Topics"
+  topics_index_followers: "Followers"
+  topics_edit_title: "Edit topic"
+  topics_show_title: "Topic"
+  topics_show_followers: "Topic Followers"
+  topics_show_follow: "Follow this topic"
+  topics_show_unfollow: "Unfollow this topic"
+  topics_show_postslist: "All posts in"
+

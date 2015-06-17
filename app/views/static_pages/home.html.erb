@@ -1,0 +1,50 @@
+<% provide(:title, 'De vacaturesite voor data specialisten') %>
+<% meta description: (t :description_home) %>
+<% meta keywords: ['datavacature', 'vacaturesite data specialisten', 'vacature', 'data analist', 'webanalist', 'big data expert'] %>
+
+<% if signed_in? %>
+	<div class="l-page-header l-page-header-offset pageheader-background-blue">
+		<div class="box">
+
+		
+		<div class="media attribution media-show-editor">
+			<%#= image_tag current_user.avatar.url(:thumb), class: "img img-round img-link img-show-editor" %>
+			<div class="media-body">
+				<%= link_to 'Plaats een bericht', new_post_path, class: 'btn btn-default btn-success' %>
+         
+        <!-- <button id="show_search" class="btn btn-search btn-search-margin"><%= icon('search') %></button> -->
+        
+	      <%= link_to 'Volg onderwerpen', topics_path, class: 'btn btn-default btn-primary float-right' %>
+	      <!-- <div id="search-form-container" class="hide">
+		      <%= form_tag(search_path, :method => "get", id: 'search-form', class: 'search-form-container') do %>
+		        <%= search_field_tag :search, params[:search], placeholder: 'zoeken', class: 'input-search' %>
+		        <button type="submit" class="btn btn-search btn-search-margin"><%= icon('search') %></button>
+		      <% end %>
+			  </div> -->
+				
+			
+			</div>
+		
+		</div>
+		</div>	
+	</div>
+
+	<div class="box l-box-offset l-main-feed l-box-shadow">
+		<% if @feed_items.empty? %>
+		 	<div class="text-center feed-blank">
+		 		<h4><%= (t :posts_index_noposts) %></h4>
+		 		<%= link_to (t :posts_index_noposts_btn), topics_path, class: "btn btn-default btn-primary" %>
+		 	</div>
+		 		
+		 <% else %>
+			<%= render 'shared/feed' %>
+		<% end %>
+		
+	</div>
+<% else %>
+	<%= render 'landingpage' %>
+<% end %>
+
+
+
+

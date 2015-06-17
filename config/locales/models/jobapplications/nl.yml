@@ -1,0 +1,26 @@
+nl:
+  activerecord:
+    models:
+      jobapplication: 'sollicitatie'
+    attributes:
+      jobapplication:
+        name: 'naam'
+        email: 'email'
+        content: 'motivatie'
+        cv: 'cv'
+        cv_content_type: 'bestandsformaat cv'
+        letter: 'motivatiebrief'
+        letter_content_type: 'bestandsformaat motivatiebrief'
+    errors:
+      models:
+        jobapplication:
+          attributes:
+            cv:
+              spoofed_media_type: 'is niet juist'
+              content_type: 'is geen geldig bestandsformaat'
+            letter:
+              spoofed_media_type: 'is niet juist'
+              content_type: 'is geen geldig bestandsformaat'
+
+  flash_jobapplications_create: "Sollicitatie verstuurd!"
+  flash_jobapplications_error: "Kon niet worden verstuurd, controleer alle benodige informatie."

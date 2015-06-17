@@ -1,0 +1,39 @@
+nl:
+  simple_form:
+    labels:
+      session:
+        email: "Email"
+        password: "Wachtwoord"
+    placeholders:
+      session:
+        email: "Email"
+        password: "Wachtwoord"
+
+#other
+  sessions_new_title: "Aanmelden"
+  sessions_new_btn: "Aanmelden"
+  sessions_new_noaccount: "Nog geen account?"
+  sessions_new_createaccount: "Registreren"
+  sessions_new_forgot: "Wachtwoord vergeten?"
+  sessions_new_remember: "Onthoud mijn gegevens"
+  accounts_activation_new: "Account activatie email opnieuw verzenden"
+  accounts_activation_new_btn: "Verzend instructies"
+  accounts_activation_success: "Account geactiveerd!"
+  accounts_activation_link_error: "Ongeldige activatie link"
+  accounts_activation_error: "Account nog niet geactiveerd, controleer je email voor de activatie link"
+  flash_users_activate_error: "Geen inactief account gevonden voor dit Email adres"
+#password reset
+  password_resets_title: "Wachtwoord herstellen"
+  password_resets_placeholder: "Voer email in"
+  password_resets_btn: "Verzend instructies voor nieuw wachtwoord"
+  password_resets_new_password: "Voer een nieuw wachtwoord in"
+  flash_password_reset_sent: "Instructies voor wachtwoord herstel verzonden."
+  flash_password_reset_notfound: "Account met dit email adres niet gevonden."
+  flash_password_reset_empty: "Wachtwoord mag niet leeg zijn."
+  flash_password_reset_success: "Nieuw wachtwoord is ingesteld"
+  flash_password_reset_expired: "Wachtwoord herstel link is verlopen"
+
+  pswd_resets_mail1: "Om een nieuw wachtwoord in te stellen, klik of kopieer de onderstaande link."
+  pswd_resets_mail2: "Deze link is 2 uur geldig."
+  pswd_resets_mail3: "Negeer deze email als je geen wachtwoord herstel instructies hebt aangevraagd."
+

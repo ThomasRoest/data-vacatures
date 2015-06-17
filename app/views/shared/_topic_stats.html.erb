@@ -1,0 +1,10 @@
+
+<%# @user ||= current_user %>
+ <div class="topic-stats">
+ 	<a href = "<%= topic_followers_topic_path(@topic) %>" class="s-hover-link">
+ 		<strong id="followers">
+ 			<%= @topic.topic_followers.count %> 
+ 		</strong>
+ 			<%= (t :topics_show_followers) %>
+ 	</a>
+ </div>

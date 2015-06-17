@@ -1,0 +1,38 @@
+nl:
+#form fields
+  simple_form:
+    labels:
+      job:
+        company: "Bedrijfsnaam"
+        place: "Plaats"
+        title: "Betreft Functie"
+        job_type: "Dienstverband"
+        summary: 'Samenvatting (max. 250 tekens)'
+        directapply: 'Sollicitatie via Datavacature.nl'
+        email: "Contact Email"
+        avatar: "Bedrijfs Logo"
+    placeholders:
+      job:
+        company: "Bedrijfsnaam"
+        place: "Plaats"
+        title: "Voeg functietitlel toe"
+        email: "Contact email"
+        summary: "Voeg een korte samenvatting toe voor deze vacature."
+  helpers:
+   submit:
+     job:
+       create: "Plaats vacature*"
+       update: "Wijzig vacature"
+#other
+  jobs_new_title: "Plaats een vacature"
+  jobs_edit_title: "Wijzig vacature"
+  jobs_new_edit_epicfield: "Functie omschrijving"
+  jobs_btn_markdown: "Gebruik Markdown"
+  jobs_show_btn_edit: "Wijzig vacature"
+  jobs_show_btn_apply: "Solliciteer"
+  jobs_show_posted_by: "Toegevoegd door"
+  jobs_show_country: "Plaats: "
+  jobs_index_title: "Data Vacatures"
+  jobs_index_btn: "Plaats vacature"
+  jobs_index_nojobs: "Plaats de eerste vacature!"
+

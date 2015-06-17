@@ -1,0 +1,13 @@
+<html>
+ <body style="font-family:Arial, sans-serif">
+ 	    <h3>klant: <%= @subscription.email %></h3>
+		<h3><%= link_to "view subscription #{@subscription.id}", showsub_url(id: @subscription.id) %></h3>
+		<h3><%= link_to 'View payment in stripe', "https://manage.stripe.com/invoices/#{@invoice.id}" %></h3>
+		<h3><%= link_to 'View customer in stripe', "https://manage.stripe.com/customers/#{@invoice.customer}" %></h3>
+		
+</body>
+</html>
+
+
+
+

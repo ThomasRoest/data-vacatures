@@ -1,0 +1,29 @@
+<% provide(:title, 'Nieuws en Artikelen') %>
+<% meta description: (t :description_topics) %>
+	
+		<div class="box l-page-header pageheader-background-blue">
+      <h1 id="h1-margin-left" class="text-inline h1-margin-left">Onderwerpen</h1>
+
+			
+			
+
+		</div>
+		
+     <div class="box l-topic-index">
+	  
+			<% @topics.each do |topic| %>
+				<div class="media attribution media-topic-index">
+					<%= link_to (image_tag topic.avatar.url(:medium), class: "img img-medium img-link"), topic %>
+						<div class="media-body">
+							<h2><%= link_to topic.name, topic, class: "s-hover-link title-blue" %></h2>
+							<span class="timestamp"><%= topic.topic_followers.count %> 
+								<%= (t :topics_index_followers) %>
+							</span>
+
+						</div>
+				</div>
+			<% end %>
+			
+	</div>
+
+

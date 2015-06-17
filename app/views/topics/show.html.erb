@@ -1,0 +1,58 @@
+<% provide(:title, @topic.name) %>
+<% meta description: @topic.name + " nieuws en artikelen" %>
+
+<div class="box">
+  <div class="media attribution media-page-header">
+		<%= image_tag(@topic.avatar.url(:thumb), class: "img img-round")%>
+     <div class="media-body">
+	     <h1><%= @topic.name %></h1><%= render 'topicfollow_form' if signed_in? %>
+		 </div>
+  </div>
+</div>
+
+
+<div class="box l-main-feed">
+	
+<ol class="main-feed-list">
+	<% @posts.each do |post| %>
+		<li id="<%= post.id %>" class="touch-item-feed media attribution feed-item border-bottom">
+			
+			<div class="media-body">
+      	<h2 class="feed-item-title">
+        	<%= link_to post.title, post, class: 'touch-title' %>
+        	<% if post.embed_url.present? %>
+          	<%= image_tag('icons/play2.png', class: "video-icon") %>
+        	<% end %>
+      	</h2>
+      
+	     	<div class="feed-item-content">
+	         <%= sanitize (HTML_Truncator.truncate(post.content, 250, :length_in_chars => true)), tags: %w(h1 h2 h3 h4 p strong ol ul li a), attributes: %w(href) %>
+	     	</div>
+
+	    	<div class="timestamp">
+	      	<%= post.user.name %> 
+	      	<%= time_tag(post.created_at) %>
+	      	<p class="feed-item-topic">Geplaatst in <strong><%= link_to post.topic.name, post.topic, class: "s-hover-link" %></strong> </p>
+	      	<%= link_to "showpost", post, class: "showpost-link" %>
+	    	</div>
+
+	    	<% if current_user?(post.user) %>
+	      	<%= link_to "Edit", edit_post_path(post) %>
+	      	-
+	      	<%= link_to"Delete", post,   method: :delete,
+	                                          data: { confirm: "You sure?" },
+	                                          title: post.content %>
+	    	<% end %>
+  		</div><!-- end media-->
+		</li>
+	<% end %>	
+</ol>
+
+		<%= paginate @posts, :window => 2 %>
+
+	<div class="text-center container-back">
+    <%= link_to (t :posts_show_btnback), topics_path, class: 'btn btn-small btn-primary' %>
+  </div>
+		
+</div>
+

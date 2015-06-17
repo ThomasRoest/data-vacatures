@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body style="font-family:Helvetica, sans-serif">
+    <h1><%= (t :job_delete_mailer_title) %></h1>
+  <!--   <p>Uw aankoop: "<%#= @subscription['plan']['name'] %>" is verwijderd.</p> -->
+  <p>Uw aankoop: 'Vacature &euro; 25 per maand' is verwijderd.</p>
+    <h4>
+       <%= link_to (t :job_delete_mailer_2) , subscriptions_url %></p>
+    </h4>
+    
+     
+    <hr>
+    <p style="font-weight:bold">
+      <a href="https://datavacature.nl" style="text-decoration:none">Datavacature.nl</a>
+    </p>
+    <hr>
+    <%#= @subscription %>
+  </body>
+</html>

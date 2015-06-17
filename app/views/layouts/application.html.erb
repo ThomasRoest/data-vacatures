@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="html-height" lang="nl">
+<head>
+    <meta name="robots" content="index,follow"/>
+	  <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= metamagic %>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <meta name="author" content="">
+  	
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%#= stylesheet_link_tag    "epic-style", media: "all" %>
+  	<%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  	<%= render 'layouts/shim' %>
+    <%= render 'layouts/typekit' %>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:700,400' rel='stylesheet' type='text/css'> -->
+    <meta name="theme-color" content="#0d47a1">
+</head>
+<body id="home">
+  <div id="wrapper" class="main-background">
+    <% unless !signed_in? && current_page?(root_path) %>
+       <%= render 'layouts/header' %>
+    <% end %>
+     <div class="main-container">
+        <% flash.each do |key, value| %>
+            <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+          <% end %>  
+          <%= yield %>  
+          <%#= debug(params) if Rails.env.development? %>
+       </div>
+       
+      <%= render 'layouts/footer' %>
+    </div>
+    <% if Rails.env.production? %>
+      <%= render 'layouts/googletag' %>
+    <% end %>
+</body>
+</html>

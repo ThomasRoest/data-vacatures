@@ -1,0 +1,5 @@
+nl:
+  flash_comments_create: "Reactie geplaatst"
+  flash_comments_error: "Reactie kan niet worden geplaatst"
+  flash_comments_update: "Reactie aangepast"
+  flash_comments_destroy: "Reactie verwijdered"

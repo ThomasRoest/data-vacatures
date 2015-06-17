@@ -1,0 +1,42 @@
+<% provide(:title, (t :jobs_index_title)) %>
+<% meta description: (t :description_jobs) %>
+<% meta keywords: ['datavacature', 'vacaturesite data specialisten', 'vacature', 'data analist', 'webanalist', 'big data expert'] %>
+<div class="l-page-background">
+
+
+	<div class="l-page-header l-page-header-offset pageheader-background-blue">
+		<div class="box">
+			<h1><%= (t :jobs_index_title) %></h1>
+		</div>
+  </div>
+  <div class="box l-box-offset l-jobs-index l-box-shadow"> 
+
+  <div class='text-center'>
+		<%#= link_to (t :jobs_index_btn), subscriptions_path, class: "btn btn-default btn-success btn-margin" %>
+		<a class="btn btn-default btn-transparent-blue btn-margin" href="/abonnementen">Plaats een vacature <%= icon('pencil-square-o') %></a>
+	</div>
+	<%#= current_page?(jobs_path) %>
+	<%#= current_page?(controller: 'static_pages', action: 'contact') %>
+
+	<div class="l-jobs-index-list">
+	<% if @jobs.exists? %>
+			<% @jobs.each do |j| %>
+				<div class="media attribution media-jobs-list touch-item-jobs touch-hover">
+					<%= link_to image_tag(j.avatar.url(:thumb), class: "img img-link"), j %>
+					<div class="media-body">
+						<h2><%= link_to j.title, j, class: 'touch-title' %></h2> 
+						<span><%= j.company %> |</span>
+						<span><%= icon('map-marker', (j.place).capitalize) %></span>
+						<span><%= icon('clock-o', j.job_type) %><%= link_to j.title, job_path(j), class: "showpost-link" %></span>
+					</div>
+				</div>
+			<% end %>
+
+			<% else %>
+				<h1 class="text-center"><%= (t :jobs_index_nojobs) %></h1>
+			<% end %>
+	
+	</div>
+	<h4 class="text-center text-margin-top2em"><%= link_to "Zelf aan de slag met data?", courses_path %></h4>
+</div>
+</div>

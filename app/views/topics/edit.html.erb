@@ -1,0 +1,10 @@
+<% provide(:title, (t :topics_edit_title)) %>
+<div class="box l-show-post">
+	<h1><%= (t :topics_edit_title) %></h1>
+		<%= simple_form_for @topic do |t| %>
+			<%= t.input :name %>
+			<%= t.input :avatar %>
+			<hr>
+			<%= t.button :submit, class: "btn btn-large btn-success" %>
+		<% end %>
+</div>

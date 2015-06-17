@@ -1,0 +1,23 @@
+<% provide(:title, 'Contact')%>
+<% meta description: (t :description_contact) %>
+
+<div class="form-panel">
+	<div class="form-panel-heading">
+    <h1 class="text-center title-blue"><%= (t :contacts_new_title) %></h1>
+	</div>
+	<div class="form-panel-body">
+		<%= simple_form_for @contact, defaults: { input_html: { class: "input-default" } } do |f| %>
+			<%= f.error_notification %>
+			<%= f.input :name, autofocus: true %>
+			<%= f.input :email %>
+			<%= f.input :content, as: :text %>
+			<%= f.button :submit, class: 'btn btn-default-submit btn-success'%>
+		<% end %>
+	</div>
+  <div class="form-panel-footer">
+  	<ul class="ul-basic ul-nostyle">
+    	<li><strong>Datavacature.nl</strong></li>
+    	<li><%= mail_to 'contact@datavacature.nl', 'contact@datavacature.nl', class: 's-hover-link' %></li>
+    </ul>
+  </div>
+</div>

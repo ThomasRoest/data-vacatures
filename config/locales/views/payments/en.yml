@@ -1,0 +1,21 @@
+en:
+  pricing_title: "New job listing | Pricing"
+  pricing_header: "Add a new job"
+  pricing_to_payments: "Go to payment"
+  pricing_month: "Monthly"
+  payment_title: "Payment"
+  payment_ccnumber: "Credit Card Number"
+  payment_btn_buy: "Add a job listing"
+  flash_pickup_success: "Payment processed, add the job listing!"
+
+  #receipt mailer
+  receipt_mailer_title: "Datavacatures.nl: Receipt"
+  receipt_mailer_1: "Thank you for your purchase! Attached is your receipt. "
+  receipt_mailer_2: "You've purchased the product "
+  receipt_mailer_3: "Add your new job here if you haven't already!"
+  receipt_mailer_4: "Receipt nr: "
+  receipt_mailer_5: "Account: "
+  receipt_mailer_6: "If you have any questions, do not hesitate to contact us at: "
+  job_delete_mailer_title: "Datavacatures: Job removed"
+  job_delete_mailer_1: "Your job posting is removed and your subscription is cancelled."
+  job_delete_mailer_2: "Add a new job listing?"

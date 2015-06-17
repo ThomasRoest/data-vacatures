@@ -1,0 +1,42 @@
+<div class="box l-generic">
+<h1>Listing subscriptions</h1>
+
+<table class="table-show-sub">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th> email</th>
+      <th> User id</th>
+      <th> plan</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subscriptions.each do |sub| %>
+      <tr>
+        <td><%= sub.id %></td>
+        <td><%= sub.email %></td>
+        <td><%= sub.plan_id %></td>
+        <td><%= link_to 'Show', showsub_path(id: sub.id) %></td>
+        <td><%#= link_to 'Edit', edit_sale_path(sale) %></td>
+        <% if sub.finished? %>
+          <td>
+            <%= link_to 'Destroy', sub, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+          
+          <% else %>
+          <td>
+            <%= sub.state %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<hr>
+
+<%= paginate @subscriptions %>
+
+<br>
+</div>

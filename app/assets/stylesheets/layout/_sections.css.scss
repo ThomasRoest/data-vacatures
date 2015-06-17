@@ -1,0 +1,164 @@
+.l-generic {
+	padding: 1em;
+	background-color: #fff;
+}
+.l-page-top {
+	margin-top: 0.6em;
+}
+.l-main-feed {
+	background-color: #fff;
+	margin-bottom: 1em;
+}
+.l-topic-index {
+	padding: 1em;
+	margin-bottom: 1em;
+	background-color: #fff;
+}
+.l-user-index {
+	padding: 1em;
+	background-color: #fff;
+}
+.l-profile {
+	background-color: #fff;
+	padding-top: 1em;
+}
+.l-profile-feed {
+	padding: 1em;
+	margin-bottom: 1em;
+	margin-top: 0.2em;
+	background-color: #fff;
+}
+.l-jobs-index {
+	padding-bottom: 2.5em;
+	margin-bottom: 1em;
+	background-color: #fff;
+}
+
+.l-job-show-header {
+  p {
+    text-align: center;		
+	}
+  h1,p {
+  	color: #fff;
+  }
+  h1 {
+    font-weight: normal;
+  }
+  padding: 1em 1em 2em 1em;
+}
+
+.l-job-show-content {
+	padding: 1em 1em 4em 1em;
+	margin-bottom: 1em;
+	background-color: #fff;
+	.timestamp {
+		margin-top: 10px;
+	}
+}
+.l-comments-show {
+	padding: 1em;
+	margin-top: 0.2em;
+	margin-bottom: 1em;
+	background-color: #fff;
+}
+.l-about {
+	margin-bottom: 1em;
+}
+.l-user-content {
+	a {
+	 &:hover {
+      color: aqua;
+    }
+    &:active {
+  	  color: aqua;
+    }
+    &:focus {
+      color: aqua;
+    }
+  }
+}
+
+.l-page-header {
+  color: #fff;
+  padding: 0.5em 0.5em 0.5em 1em;
+  h1 {
+  	text-shadow: 1px 2px 2px #000;
+  	font-size: 1.6em;
+  	color: #fff;
+  }
+}
+
+.l-page-header-editor {
+	background-color: #3F51B5;
+}
+.l-pageheader-courses {
+	h1 {
+		font-size: 1.1em;
+	}
+}
+
+.l-post-new-btns {
+		margin-top: 0.5em;
+}
+.l-posts-show-header {
+	padding: 1em;
+	color: #fff;
+	h1 {
+		color: #fff;
+		text-shadow: 1px 4px 4px #000;
+	}
+	a {
+		color: aqua;
+	}
+}
+
+.l-box-shadow {
+  box-shadow: 0px 0px 5px #ccc;  
+}
+.l-margin-bottom {
+	margin-bottom: 1em;
+}
+.l-box-courses {
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+	.l-profile-feed {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+  .l-page-header {
+    padding: 1em 1em 1em 2em;
+  }
+  .l-page-header-offset {
+    padding-bottom: 5em;
+  }
+  .l-box-offset {
+    position: relative;
+    top: -70px;
+  }
+  // box postion relative top -70px
+	.l-page-header-editor {
+	  padding: 1.5em;
+  }
+
+  .l-about {
+  	padding: 3em;
+  }
+  .l-box-courses {
+    padding: 1em;
+  }
+  .l-job-show-header {
+  	h1 {
+  		font-size: 2em;
+  	}
+  }
+  .l-job-show-content {
+  	padding: 2em 3em 2em 3em;
+  }
+  .l-posts-show-header {
+  	h3 {
+  		font-size: 1.5em;
+  	}
+  }
+}
+

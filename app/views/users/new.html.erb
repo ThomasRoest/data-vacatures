@@ -1,0 +1,23 @@
+<% provide(:title, (t :users_new_title)) %>
+<% meta description: (t :description_users_new) %>
+
+<div class="form-panel">
+  <div class="form-panel-heading">
+		<h1 class="text-center title-blue"><%= (t :users_new_title) %></h1>
+	</div>
+  <div class="form-panel-body">
+    <p class='form-errors text-center'></p>
+	  <%= simple_form_for @user, defaults: { input_html: { class: "input-default" } } do |f| %>
+		  <%= f.input :name, autofocus: true %>
+		  <%= f.input :email %>
+		  <%= f.input :password, input_html: {id: "password"}, required: true %>
+		  <%= f.input :password_confirmation, input_html: {id: "confirm_password"}, required: true  %>
+		  <%= f.button :submit, class: "btn btn-default-submit btn-success btn-margin", id: 'users_new_submit' %>
+	  <% end %>
+  </div>
+  <div class="form-panel-footer">
+  	<%= link_to 'Aanmelden', signin_path %>
+  </div>
+</div>
+
+

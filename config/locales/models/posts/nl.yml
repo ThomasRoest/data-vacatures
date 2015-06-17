@@ -1,0 +1,4 @@
+nl:
+  flash_posts_create: "Bericht geplaatst!"
+  flash_posts_destroy: "Bericht verwijderd"
+  flash_posts_update: "Bericht aangepast"

@@ -1,0 +1,67 @@
+<% provide(:title, (t :jobs_edit_title)) %>
+<div class="form-panel-job">
+  <div class="form-panel-heading">
+  	<h1 class="text-center"><%= (t :jobs_edit_title) %></h1>
+  </div>
+
+  <div class="form-panel-body">
+    <p class='form-errors text-center'></p>
+		<%= simple_form_for (@job),defaults: { input_html: { class: 'input-default'}} do |f| %>
+			<%= f.input :summary, as: :text %>
+			<p id="charcount-left" class="charcountleft hide">
+				Tekens over: <span id="show_count" class="char-counter">2</span>
+			</p>
+			<%= f.input :company %>
+			<%= f.input :place %>
+			<%= f.input :title %>
+      <%= f.input :job_type, collection: ["Full Time", "Part Time", "Freelance"], prompt: 'selecteer type dienstverband' %>
+			<%= f.input_field :description, 
+													value: @job.markdown,
+													id: "parsed_markdown", 
+													label: false,
+													as: :hidden %>
+													
+													<!-- value: sanitize(@job.markdown, tags: %w(hr h1 h2 h3 h4 strong ul ol li))  -->
+
+			<span>* <%= (t :jobs_new_edit_epicfield) %></span>
+			<div id="epiceditor"></div>
+
+			<%= link_to (t :jobs_btn_markdown), "", 
+				               class: "btn btn-small-height btn-primary btn-modal-form float-right", 
+				               id: "markdown-options-btn" %>
+
+			<%#= f.input :email, label:'contact email (optie)' %>
+			<%= f.input :markdown, as: :hidden, label: false %>
+			<%= f.input :avatar %>
+			<div class="checkbox-container">
+				<%= f.check_box :directapply, class: 'checkbox-jobs' %>
+				<label><h3>Directe sollicitatie mogelijk via Datavacature.nl</h3></label><br>
+				<p class="timestamp">Of voeg een eigen link toe in de functieomschrijving<p>
+			</div>
+			
+			<div class="center">
+				<%= f.button :submit, class: "btn btn-default btn-success btn-margin", id: "submit-job-form" %>
+			</div>
+		</div>
+			
+		<% end %>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+     
+     var editor = new EpicEditor().load();
+     
+    $("#submit-job-form").click(function(e){
+
+        e.preventDefault();
+        var theMarkdown = editor.exportFile();
+        $("#job_markdown").val(theMarkdown);
+        
+        $('.edit_job').submit();
+    })
+});
+</script>
+
+
+

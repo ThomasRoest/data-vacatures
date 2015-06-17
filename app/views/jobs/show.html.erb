@@ -1,0 +1,64 @@
+<% provide(:title, @job.company + ' - ' + @job.title) %>
+<% meta description: "Vacature voor #{@job.title} bij #{@job.company}" %>
+<% meta keywords: ['datavacature', 'vacature', @job.title, @job.company] %>
+
+<div class="box l-job-show-header pageheader-background-blue-job">
+	<div class="text-center">
+		<div>
+			<%= image_tag(@job.avatar.url(:large), class: 'img-job') %>
+		</div>
+		<h1><%= @job.title %></h1>
+		<p><%= @job.company %> | <%= icon('map-marker', (@job.place).capitalize) %> | <%= icon('clock-o', @job.job_type) %></p>
+
+		<p class='p-bio'><em><%= @job.summary %></em></p>
+
+	</div>
+</div>
+
+	<div class="box l-job-show-content l-box-shadow">
+    
+	<ul class="job-opening">
+		<!-- <li><%#= icon('map-marker') %> <%#= (@job.place).capitalize %></li> -->
+		<li>
+			<div class='l-user-content'>
+			 <%= sanitize @job.description, tags: %w(hr h2 h3 h4 strong em ul ol li p a), atrributes: %w(href) %>
+			</div>
+		</li>
+		
+		<% unless @job.directapply == false %>
+    <div class="center container-back">
+    	<%= link_to 'Solliciteer direct', new_jobapplication_path(job_id: @job.id),  class: "btn btn-default btn-success" %>
+	  </div>
+    <% end %>
+    <hr>
+		
+		<li class="timestamp"><b><%= (t :jobs_show_posted_by) %></b> <%= @job.user.name %></li>
+		<li class="timestamp"><b>Geplaatst op: </b> <%= time_tag(@job.created_at) %></li>
+	</ul>
+
+	<% if current_user?(@job.user) %>
+    <p><%= link_to (t :jobs_show_btn_edit), edit_job_path(@job), class: 's-hover-link text-bold' %></p>
+  <% end %><br>
+  
+
+    <section class="share-buttons">
+
+    	<a href="<%= "http://twitter.com/home?status=" + job_url(id: @job) %>">
+    		<%= icon('twitter', '',class: 'icon-sharebutton') %>
+    	</a>
+  
+
+       <a href="<%= "http://www.linkedin.com/shareArticle?mini=true&url=" + job_url(id: @job) + "&title=" + @job.title + " | " + @job.company + "&source=" + "https://datavacature.nl" %>">
+       	<%= icon('linkedin', '',class: 'icon-sharebutton') %>
+       </a>  
+
+   </section><br>
+
+	<br>
+	<div class="text-center">
+    <%= link_to (t :posts_show_btnback), jobs_path, class: "btn btn-small btn-primary" %>
+  </div>
+</div>
+
+
+<%#= truncate(feed_item.title, length: 75) %>

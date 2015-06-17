@@ -1,0 +1,173 @@
+.l-grid-course {
+	margin: 0.5em 0.5em 0 0.5em;
+	border-radius: 3px;
+	background-color: #fff;
+  border: 1px solid #ccc;
+	h2 {
+		margin: 0;
+		font-size: 1.5em;
+		padding: 1em;
+		a {
+			color: #fff;
+			text-shadow: 1px 4px 5px #000;
+		}
+	}
+}
+
+.l-grid-course-content {
+	padding: 0 1em 1.3em 1em;
+}
+
+.l-grid-course-img {
+	padding: 0.5em 0em 0.2em 1em;
+	h2 {
+		padding: 0;
+	}
+	p {
+		padding: 0;
+		margin: 0.7em 0 0 0;
+		a {
+			color: #fff;
+		 }
+	}
+}
+
+// refactor with sass
+
+.l-grid-course-colors {
+	&:first-child {
+		.l-grid-course-img {
+			background:  #009688 image-url('dv_2_h160b20.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+       background-size: cover;
+		}
+	}
+	&:nth-child(2){
+		.l-grid-course-img {
+		  background: #9C27B0 image-url('dv_2_h160b20.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(3){
+		.l-grid-course-img {
+		  background: #E91E63 image-url('dv_2_h160b20.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(4){
+		.l-grid-course-img {
+		  background: #5cb860 image-url('dv_2_h16030.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(5){
+		.l-grid-course-img {
+		  background: #637a91 image-url('dv_2_h160b20.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(6){
+		.l-grid-course-img {
+		  background: #f092b0 image-url('dv_2_h16030.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(7){
+		.l-grid-course-img {
+		  background: #e59a13 image-url('dv_2_h16030.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(8){
+		.l-grid-course-img {
+		  background: #673AB7 image-url('dv_2_h160b20.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(9){
+		.l-grid-course-img {
+		  background: #009688 image-url('dv_2_h160b20.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(10){
+		.l-grid-course-img {
+		  background: #673AB7 image-url('dv_2_h160b20.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(11){
+		.l-grid-course-img {
+		  background: #f092b0 image-url('dv_2_h160b20.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+	&:nth-child(12){
+		.l-grid-course-img {
+		  background: #E91E63 image-url('dv_2_h160b20.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;	
+		}
+	}
+}
+
+@media (min-width: 535px){
+
+	.l-grid-course {
+		margin: 0.5em 0 0 0;
+		height: 460px;
+	}
+	
+	.l-grid-course-img {
+	  min-height: 160px;
+	  padding: 1.5em;
+  }
+}
+
+// @media (min-width: 768px){
+// 	.l-grid-course-img {
+	  
+//   }
+// }
+
+@media (min-width: 992px) {
+	.l-grid-course {
+		h2 {
+		  font-size: 1.5em;	
+		}
+	}
+}

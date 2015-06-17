@@ -1,0 +1,51 @@
+<% provide(:title, @user.name) %>
+<div class='box l-page-header background-lightblue'>
+		<h1><%= (t :users_show_title) %></h1>
+</div>
+<div class="box l-profile text-center">
+		<div>
+			<%= image_tag @user.avatar.url(:large), class: "img-round img-profile" %>
+		</div>
+		<h1><%= @user.name %></h1>
+    <% if @user.university? %>
+				<h4><%= @user.university %></h4>
+		<% end %>
+
+		<% if current_user?(@user) %>
+			<%= link_to (t :users_show_bio), edit_user_path(@user), class: 's-hover-link' %> <%= icon('cog') %>
+		<% end %>
+		<hr>
+		
+		<%= render 'follow_form' if signed_in? %>
+		<% if current_user?(@user) %>
+			<% if current_user.subscriptions.state_finished.any? || current_user.jobs.any? %>
+				<%= link_to (t :users_show_btn_jobs), mijn_vacatures_user_path(@user), class: "btn btn-large btn-primary btn-margin" %>
+			<% end %>
+		<% end %>
+
+		<section>
+			<%= render 'shared/stats' %>
+		</section>
+</div>
+
+
+<div class="box l-profile-feed">
+	<% if @user.posts.any? %>
+		<h3 class="center title-profile-feed">
+			<%= (t :users_show_posts_list) %> (<%= @user.posts.count %>)
+		</h3>
+	<% end %>
+
+<% @posts.each do |p| %>
+	<ul class="profile-post-list">
+		<li>
+			<b><%= link_to p.title, post_path(p), class: "s-hover-link" %></b>&nbsp;
+			<span class="timestamp"><%= time_tag(p.created_at) %> in <%= link_to p.topic.name, p.topic %></span>
+		</li>
+	</ul>
+<% end %>
+<%= paginate @posts, :window => 2 %>
+	
+</div>
+
+

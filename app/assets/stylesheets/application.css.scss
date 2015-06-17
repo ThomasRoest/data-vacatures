@@ -1,0 +1,31 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+// 01. Utilities ( COMPASS, Variables, Functions, Mixins, etc... )
+// 02. Libraries
+// 03. Base ( regular elements )
+// 04. Layout ( layout template, grid structure )
+// 05. Modules ( modules, background, colors, typography.. )
+// 06. States
+// 07. @font-face
+// 08. Print
+// 09. Shame
+
+
+@import 'utilities/index';
+@import 'base/index';
+@import 'layout/index';
+@import 'modules/index';
+@import 'states/index';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';

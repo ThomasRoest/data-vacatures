@@ -1,0 +1,47 @@
+en:
+#user form fields
+  simple_form:
+    labels:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Confirm password"
+        university: "Short Bio"
+        avatar: "Profile Picture"
+    placeholders:
+      user:
+        name: "Your username"
+        email: "Enter email"
+        password: "Enter Password"
+        password_confirmation: "Confirm Password"
+        university: "Short Bio"
+  #user buttons
+  helpers:
+    submit:
+      user:
+        create: "Create my account"
+        update: "Save changes"
+  #form titles     
+  users_new_title: "Sign up"
+  users_edit_title: "Edit your profile"
+  #user show
+  users_show_title: "Profile"
+  users_show_bio: "Add some information here!"
+  users_show_btn_jobs: "My job listings"
+  users_show_posts_list: "All posts"
+  users_show_follow: "Follow this user"
+  users_show_unfollow: "Unfollow this user"
+  user_stats_following: "Following"
+  user_stats_followers: "Followers"
+  users_index_title: "All users"
+  #purchases page
+  users_purchases_title: "My job listings"
+  users_purchases_id: "Purchase id:"
+  users_purchases_description: "Job listing basic - "
+  users_purchases_month: "Monthly"
+  users_purchases_placed: "Job listing added on: "
+  users_purchases_btn_add: "Add a job listing"
+  users_purchases_btn_remove: "Remove job listing"
+  users_purchases_btn_new: "Add a new job listing"
+

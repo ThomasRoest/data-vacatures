@@ -1,0 +1,40 @@
+
+.feed-item {
+	padding: 0.5em;
+	
+}
+
+.feed-item-content {
+	display: none;
+}
+
+.feed-item-title {
+  margin: 0;
+  font-weight: bold;
+}
+
+.feed-item-topic {
+	margin: 0.1em 0 0 0;
+	color: #ccc;
+}
+
+@media screen and (min-width: 768px) {
+	.feed-item {
+		padding: 1.2em 1.2em 1.2em 1.2em;
+		&:hover {
+			background-color: #F0FFFF;
+			cursor: pointer;
+		}
+	}
+	.feed-item-content {
+		display: block;
+		h1,h2,h3,h4 {
+			font-weight: normal;
+			font-size: 1em;
+		}
+		p {
+			margin: 0.5em 0 0.5em 0;
+		}
+	}
+}
+

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body style="font-family:Helvetica, sans-serif">
+    <h1>Datavacature.nl</h1>
+      <p>Hallo, <%= @user.name %></p>
+      <p>Welkom op Datavacature.nl, activeer je account via de onderstaande link:</p>
+      <p style="font-weight: bold">
+      	<%= link_to "Activeer mijn account", edit_account_activation_url(@user.activation_token, email: @user.email) %>
+      </p>
+  </body>
+</html>

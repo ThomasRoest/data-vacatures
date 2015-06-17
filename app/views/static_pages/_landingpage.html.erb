@@ -1,0 +1,47 @@
+<div class="hero-container img-background">
+	<nav class="nav-landingpage">
+		<div class='nav-landingpage-container'>
+			<%= link_to image_tag("logo_transparentv2.png", alt: 'De vacaturesite voor data specialisten', class: 'img-logo-landingpage'), root_path %>
+			<%= link_to icon('sign-in', 'Aanmelden', class: 'icon-signin-lp'), signin_path, class: 'nav-lp-signin' %> 
+		</div>
+	</nav>
+
+	<div class="hero-text">
+		<div class="hero-text-container">
+		  <h2 class="title-shadow lp-maintitle"><span class="main-title-data">Data</span><span class="main-title-vacature">Vacature.nl</span></h2>
+		  
+		  <h1 class="title-shadow lp-subtitle">Vacatures voor data specialisten</h1>
+		<!-- 	<p class="intro-text">Datavacature.nl is de <strong>vacaturesite voor data specialisten</strong></p> -->
+			<div class="ul-container">
+				<ul class='ul-nostyle ul-landingpage'>
+				  <li><%= icon('check-circle', 'Data analyse' ) %></li>
+				  <li><%= icon('check-circle', '(Web) analytics' ) %></li>
+				  <li><%= icon('check-circle', 'Big data' ) %></li>
+				  <li><%= icon('check-circle', 'Data driven marketing' ) %></li>
+				  <li><%= icon('check-circle', 'Business Intelligence' ) %></li>
+			  </ul>
+			</div>
+			
+			<p class="intro-text">
+			Op zoek naar een carrière als data-analist? Bezoek onze <strong><%= link_to 'vacaturepagina.', jobs_path, class: 'lp-link s-hover-link', title: 'Bekijk de vacatures' %></strong> Meer weten over big data en analytics? Lees meer op de <strong><%= link_to "nieuws & artikelen pagina.", posts_path, class: 'lp-link s-hover-link', title: 'Nieuws en artikelen' %></strong>
+		</p>
+	   </div>
+	</div> 
+
+	<div class="text-center landingpage-btn-container">
+		<a class="btn btn-landing btn-landing-jobs btn-transition" href="/vacatures">
+			 Bekijk vacatures
+		</a>
+		<a class="btn btn-landing btn-landing-news btn-transition" href="/nieuws-artikelen">
+			 Nieuws &amp; artikelen
+		</a>
+	</div>
+	<!-- <div class="img-chart-container">
+		<%#= image_tag('dv_2.png', class: 'img-chart-lp') %>
+	</div> -->
+</div>
+
+<!-- <div class='lp-section-white text-center'>
+	<%#= image_tag('https://s3.eu-central-1.amazonaws.com/datavacature-img/icon_set.png', alt: 'de vacaturesite voor data specialisten', class: 'img-lp') %>
+</div>
+ -->

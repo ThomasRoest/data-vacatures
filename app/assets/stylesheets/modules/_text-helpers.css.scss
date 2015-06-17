@@ -1,0 +1,87 @@
+.text-center {
+  text-align: center;
+}
+.text-block {
+  display: block;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-margin-reset {
+  margin: 0px;
+}
+.text-margin-top {
+  margin-top: 10px;
+}
+.text-margin-top2em {
+  margin-top: 2em;
+}
+.profile-username {
+  margin: 0 0 30px 0;
+}
+.center {
+  text-align: center;
+}
+.timestamp {
+  color: #CCC;
+  display: block;
+  margin: 3px 0 3px 0;
+}
+.text-muted {
+  margin: 10px 0px 10px 0px;
+  color: #CCC; 
+}
+.text-muted-learn {
+  margin: 20px 0px 10px 0px;
+  color: #CCC;
+}
+.username-userindex {
+  margin-left: 15px;
+}
+.title-profile-feed {
+  padding: 0 0 20px 0;
+}
+.weight-normal {
+  font-weight: normal;
+}
+.feed-blank {
+  padding: 1em;
+}
+.feed-item-desktop-preview{}
+
+.title-shadow {
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  // check browser support?
+}
+
+.text-inline {
+  display: inline-block;
+}
+.link-job-show {
+  margin-bottom: 1em;
+}
+.course-tag {
+  // border: 1px solid $light-grey;
+  border-radius: 8px;
+  padding: 0.4em;
+  color: #fff;
+  font-weight: bold;
+  background-color: #5d72cf;
+  
+}
+
+.float-left {
+  float: left;
+}
+
+.p-bio {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:768px){
+  .h1-sub-index {
+    margin-left: 3em;
+  }
+}

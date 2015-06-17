@@ -1,0 +1,21 @@
+<div class="grid-4 grid-margin-3column l-grid-course-colors">
+  <div class="l-grid-course">
+    
+    <div class="l-grid-course-img">
+      <h2><%= link_to course.title, course.course_url %></h2>
+        <p><b><%= link_to course.company, course.course_url %></b></p>
+    </div>
+
+    <div class="l-grid-course-content">     
+      <p><%= course.description %></p>
+      <p class="course-tag text-inline"><%= course.category.capitalize %></p>
+        <% if signed_in? && current_user.admin? %>
+          <span><br>
+            <%= link_to 'Edit', edit_course_path(course) %>
+            <%= link_to 'Delete', course, method: :delete, data: { confirm: "Are you sure?"} %>
+          </span>
+        <% end %>
+    </div>
+  </div>
+</div>
+  

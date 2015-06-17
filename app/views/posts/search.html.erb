@@ -1,0 +1,22 @@
+<div class="box l-page-header pageheader-background-blue">
+		<h1>Zoeken in artikelen</h1>
+		<%= form_tag(search_path, :method => "get", id: 'search-form', class: 'search-form-container') do %>
+		  <%= search_field_tag :search, params[:search], placeholder: 'zoeken', class: 'input-search' %>
+		  <button type="submit" class="btn btn-search btn-primary"><%= icon('search') %></button>
+		<% end %>
+	</div>
+	<div class='box l-generic l-box-shadow'>
+	<% unless @posts.empty? %>
+	  <ul class="ul-nostyle ul-search-results">
+	  	<p><%= @posts.count %> resultaten gevonden
+		  <% @posts.each do |p| %>
+	  	  <li>
+	  	  	<strong><%= link_to p.title.capitalize, p %></strong>
+          <span class="timestamp"><%= time_tag(p.created_at) %></span>
+	  	  </li>
+		  <% end %>
+		</ul>
+  <% else %>
+		<p>Geen resultaten gevonden</p>
+	<% end %>
+</div>

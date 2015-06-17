@@ -1,0 +1,31 @@
+nl:
+  simple_form:
+    labels:
+      jobapplication:
+        name: "Naam"
+        email: "Email"
+        content: "Motivatie"
+        linkedin_url: "Linkedin profiel"
+        cv: "CV"
+        letter: "Motivatiebrief"
+    placeholders:
+      jobapplication:
+        name: "Naam"
+        email: "Email"
+        content: "Motivatie"
+        linkedin_url: "Linkedin profiel"
+  helpers:
+    submit:
+       jobapplication:
+         create: "Verstuur sollicitatie"
+
+#other
+  jobapplications_new_title: "Solliciteer"
+#application mail
+  jobapplication_email_title: "Datavacature.nl: Nieuwe sollicitatie"
+  jobapplication_email_1: "Er is een nieuwe sollicitatie voor de volgende functie: "
+  jobapplication_confirm_title: "Bedankt voor je sollicitatie"
+  jobapplication_confirm_1: "Bedankt voor je interesse in de volgende functie: "
+
+
+  

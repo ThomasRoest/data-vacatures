@@ -1,0 +1,26 @@
+<% provide(:title, 'Leer data analyse en data science') %>
+<% meta description: (t :description_courses_index) %>
+<% meta keywords: ['vacatures', 'data specialisten', 'leren', 'data analist', 'webanalist', 'big data expert', 'online cursus'] %>
+
+
+  <div class='l-page-header l-page-header-offset l-pageheader-courses pageheader-background-blue'>
+    <div class="box">
+    <h1>Start je carrière als data specialist met deze online cursussen &nbsp;<%= icon('graduation-cap') %></h1>
+  </div>
+  </div>
+
+  <div class="box-large l-box-offset l-box-courses l-box-shadow">
+
+  <%= form_tag(courses_path, method: 'get', remote: true, id: 'sortform-courses', class: 'search-form-container') do %>  
+    <%= select_tag(:sort, options_for_select(course_categories),prompt: 'sorteren', id: 'sortform-courses-select', class: 'sort-select') %>
+  <% end %>
+
+
+<div class="grid-container" id="course-grid">
+
+  <%= render @courses %>
+  <%= paginate @courses, :window => 2 %>
+  
+</div><!--end container-->
+</div> 
+

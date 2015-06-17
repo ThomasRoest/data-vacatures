@@ -1,0 +1,71 @@
+<% provide(:title, 'Big data en Analytics Artikelen') %>
+<%# meta description: (t :description_topics) %>
+<% meta keywords: ['datavacature', 'vacaturesite data specialisten', 'vacature', 'data analist', 'webanalist', 'big data expert', 'nieuws', 'artikelen'] %>
+
+<div class="l-page-header l-page-header-offset pageheader-background-blue">
+  <div class="box">
+    <%#= image_tag('marketing_new_45px.png', class: "img img-round")%>
+       <h1 class='text-inline'>Nieuws &amp; Artikelen</h1>
+       <button id="show_search" class="btn btn-search btn-search-margin"><%= icon('search') %></button>
+
+       <div id="search-form-container" class="hide">
+        <%= form_tag(search_path, :method => "get", id: 'search-form', class: 'search-form-container') do %>
+          <%= search_field_tag :search, params[:search], placeholder: 'zoeken', class: 'input-search' %>
+          <button type="submit" class="btn btn-search btn-search-margin"><%= icon('search') %></button>
+        <% end %>
+      </div>
+      <div class="box">
+        <ul class="ul-topic-sort">
+          <li>Onderwerp: </li>
+        <% @topics.each do |t| %>
+          <li><%= link_to t.name, posts_path(topic: t.id) %></li> |
+        <% end %>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+  <div class="box l-main-feed l-box-offset l-box-shadow">
+	  <ol class="main-feed-list">
+	    <% @posts.each do |post| %>
+		    <li id="<%= post.id %>" class="touch-item-feed media attribution feed-item border-bottom">
+			
+					<div class="media-body">
+      	    <h2 class="feed-item-title">
+        	    <%= link_to post.title, post, class: 'touch-title' %>
+        	    <% if post.embed_url.present? %>
+          	    <%= image_tag('icons/play2.png', class: "video-icon") %>
+        	    <% end %>
+      	   </h2>
+      
+	     	   <div class="feed-item-content">
+	           <%= sanitize (HTML_Truncator.truncate(post.content, 250, :length_in_chars => true)), tags: %w(h1 h2 h3 h4 p strong ol ul li a), attributes: %w(href) %>
+	     	   </div>
+
+	    	   <div class="timestamp">
+	      	   <%= post.user.name %> 
+	      	   <%= time_tag(post.created_at) %>
+	      	   <p class="feed-item-topic">Geplaatst in <strong><%= link_to post.topic.name, post.topic, class: "s-hover-link" %></strong> </p>
+	      	   <%= link_to "showpost", post, class: "showpost-link" %>
+	    	   </div>
+
+	    	   <% if current_user?(post.user) %>
+	      	   <%= link_to "Edit", edit_post_path(post) %>
+	      	   -
+	      	   <%= link_to"Delete", post,   method: :delete,
+	                                          data: { confirm: "You sure?" },
+	                                          title: post.content %>
+	    	   <% end %>
+  		    </div><!-- end media-->
+		    </li>
+	    <% end %>	
+    </ol>
+
+		<%= paginate @posts, :window => 2 %>
+
+	  <div class="text-center container-back">
+      <%= link_to (t :posts_show_btnback), topics_path, class: 'btn btn-small btn-primary' %>
+    </div>
+
+</div>

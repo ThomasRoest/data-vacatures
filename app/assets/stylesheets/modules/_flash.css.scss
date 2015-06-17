@@ -1,0 +1,24 @@
+.alert {
+	text-align: center;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	padding: 1em;
+	font-weight: bold;
+	color: #fff;
+}
+
+.alert-error {
+	background-color: #d9534f;
+}
+
+.alert-notice {
+	background-color: #f0ad4e;
+}
+
+.alert-alert {
+	background-color: #d9534f;
+}
+
+.alert-success {
+	background-color: #29d66e;
+}

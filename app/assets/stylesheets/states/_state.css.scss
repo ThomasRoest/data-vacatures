@@ -1,0 +1,34 @@
+/*describe what elements will look like in certain states*/
+
+.hide {
+	display: none;
+}
+.hide-mobile {
+	display: none;
+}
+
+.showpost-link {
+  display: none;
+}
+
+.newpost-link {
+  display: none;
+}
+.h1-margin-left {
+  margin-left: 2em;
+}
+
+
+
+.s-hover-link {
+  &:hover {
+    color: aqua;
+    text-decoration: underline;
+  }
+  &:active {
+  	color: aqua;
+  }
+  &:focus {
+    color: aqua;
+  }
+}

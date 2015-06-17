@@ -1,0 +1,69 @@
+<% provide(:title, (t :jobs_new_title)) %>
+<div class="form-panel-job">
+	<div class="form-panel-heading">
+		<h1 class="text-center title-blue"><%= (t :jobs_new_title) %></h1>
+	</div>
+
+	<div class="form-panel-body">
+    <p class='form-errors text-center'></p><br/>
+		<%= simple_form_for (@job), defaults: { input_html: { class: 'input-default' }} do |f| %>	
+			<%= f.input :summary, as: :text %>
+			<p id="charcount-left" class="charcountleft hide">
+				Tekens over: <span id="show_count" class="char-counter">2</span>
+			</p>
+			<%= f.input :company %>
+			<%= f.input :place %>
+			<%= f.input :title %>
+			<%= f.input :job_type, collection: ["Full Time", "Part Time", "Freelance"], prompt: 'selecteer type dienstverband' %>
+			<%= f.input_field :description, 
+												value: @job.markdown,
+												id: "parsed_markdown", 
+												label: false,
+												as: :hidden %>
+
+			<span>* <%= (t :jobs_new_edit_epicfield) %></span>
+			<div id="epiceditor"></div>
+			
+			<%= link_to (t :jobs_btn_markdown), "", 
+				           class: "btn btn-small-height btn-primary btn-modal-form float-right", 
+				           id: "markdown-options-btn" %>
+			<%#= f.input :email, label:'contact email (optie)' %>
+			<%= f.input :guid, input_html: { value: @subscription.guid }, as: :hidden %>
+			<%= f.input :markdown, as: :hidden %>
+			<%= f.input :avatar %>
+
+			<div class="checkbox-container">
+				<%= f.check_box :directapply, class: 'checkbox-jobs' %>
+				<label><h3>Directe sollicitatie mogelijk via Datavacature.nl</h3></label><br>
+				<h3 class="timestamp weight-normal">Of voeg een eigen link toe in de functieomschrijving<h3>
+			</div>
+			
+			<div class="center">
+				<%= f.button :submit, class: "btn btn-default-submit btn-success", id: "submit-job-form" %>
+			</div>
+		<% end %>
+	</div>
+
+	<div class="form-panel-footer">
+		<p>*Kan later nog worden gewijzigd</p>
+	</div>		
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+     
+     var editor = new EpicEditor().load();
+     
+    $("#submit-job-form").click(function(e){
+
+        e.preventDefault();
+        var theMarkdown = editor.exportFile();
+        $("#job_markdown").val(theMarkdown);
+        
+        $("#new_job").submit();
+    })
+});
+</script>
+
+
+		

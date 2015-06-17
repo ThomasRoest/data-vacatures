@@ -1,0 +1,27 @@
+.l-text-editor {
+	padding-bottom: 0.75em;
+	background-color: #fff;
+}
+
+#epiceditor {
+	border: 1px solid #e5e5e5;
+}
+
+.l-text-editor .btn {
+	margin-top: 0.5em;
+}
+
+
+@media screen and (max-width: 768px) {
+	.l-text-editor {
+		.btn {
+		margin-right: 5px;	
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.l-text-editor {
+		padding: 1em 1em 1.2em 1em;
+	}
+}

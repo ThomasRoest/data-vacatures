@@ -1,0 +1,269 @@
+// MAIN FIXED HEADER STYLES
+
+.l-main-header {
+    position: fixed;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    background-color: #FFF;
+    color: #fff;
+    border-bottom: 1px solid $light-grey;
+    height: 3.6em;
+    z-index: 1000;
+}
+
+.horizontal-nav {
+   display: none;
+}
+
+.header-icon-container {
+  margin: 0 auto;
+}
+
+//MOBILE VIEW --> MENU LIST ITEMS (MAIN)
+
+.ul-nav { 
+    display: none; 
+}
+
+.ul-nav.open { 
+    list-style: none;
+    font-weight: bold;
+    display: block;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+   
+}
+
+.ul-nav.open li { 
+    display: block; 
+    text-align: center; 
+    border-bottom: $light-grey;
+}
+
+.ul-nav.open li a { 
+    display: block; 
+    padding: 20px 10px; 
+    text-decoration: none; 
+    &:hover {
+      background-color: $flat-blue;
+      color: #fff;
+    }
+    &:active {
+      background-color: $flat-blue;
+      color: #fff;
+    }
+    &:focus {
+      background-color: $flat-blue;
+      color: #fff;
+    }
+}
+
+//MOBILE VIEW --> LINK ITEM BLOCKS
+
+.nav-li-left {
+  float: left;
+}
+
+.nav-li-right {
+  float: right;
+}
+  // background: url(asset_path(#{"home.png"})) no-repeat center;
+  // background-size: contain;
+
+.nav-li-menu {
+  height: 48px;
+  border-left: 1px solid $light-grey;
+  color: #2c3e50;
+  padding: 1em 0.5em 1em 0.5em;
+  font-weight: bold;
+}
+
+.nav-li-menu-signedin {
+  height: 48px;
+  border-left: 1px solid $light-grey;
+  color: #2c3e50;
+  // padding: 1em 0.7em 1em 0.7em;
+  padding: 1em 0.6em 1em 0.6em;
+  font-weight: bold;
+}
+
+.nav-li-signin a {
+  margin-top: 15px;
+  width: 175px;
+  margin-left: 20em;
+}
+
+.nav-li-icon,
+.nav-li-menu {
+  &:hover {
+     background-color: $light-grey;
+   }
+  &:active {
+    background-color: $light-grey;
+  }
+  &:focus {
+    background-color: $light-grey;
+  }
+}
+
+.menu-toggle-active {
+  background-color: #F5F5F5;
+  box-shadow: 1px 1px 1px #000;
+}
+
+.homepage-signin-link {
+  margin-top: 15px;
+  margin-left: 20em;
+}
+
+
+//MEDIA QUERY LARGER SCREEN NAV----------------------------------*
+
+
+@media screen and (min-width: 768px){
+    
+ .mobile-nav {
+    display: none;
+  }
+
+ .horizontal-nav {
+   display: block;
+ } 
+
+ .nav-li-menu {
+  display: none;
+ }
+
+ .nav-li-hide {
+  display: none;
+ }
+
+.ul-nav { 
+  display: block; 
+  list-style: none; 
+  padding: 0px; 
+  margin: 0 0 0 0;
+  // icon positioning
+  font-weight: bold; 
+  text-align: center; 
+ }
+
+ .ul-nav li { 
+   width: 85px;
+   display: inline-block; 
+   text-align: left;
+    &:nth-child(4) {
+    margin-left: -10px;
+   }
+   &:nth-child(2){
+    width: 85px;
+    padding-left: 0.2em;
+   }
+  }
+
+ .ul-nav li a { 
+  display: block; 
+  text-decoration: none; 
+ }
+
+  // dropdown styles-----------------------------------*
+
+ .ul-dropdown {
+    display: none;
+    border: 1px solid #ccc;
+  }
+ 
+.ul-dropdown.open-dropdown {
+  list-style: none;
+  padding: 0px;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  font-weight: bold;
+  border-radius: 3px;
+  top: 100%;
+  width: 24%;
+  right: 5%;
+  z-index: 500;
+ }
+
+.ul-dropdown.open-dropdown li {
+    display: block;
+    text-align: center;
+  }
+
+.ul-dropdown.open-dropdown li a {
+    display: block;
+    padding: 20px 10px;
+    &:hover {
+      background-color: $flat-blue;
+      color: #fff;
+    }
+    &:active {
+      background-color: $flat-blue;
+      color: #fff;
+    }
+    &:focus {
+      background-color: $flat-blue;
+      color: #fff;
+    }
+  }
+
+.dropdown-li-icon {
+  /* // width: 65px;*/
+   width: 150px;
+   color: #2c3e50;
+   /*margin-left: ;*/
+   background-color: #fff;
+   &:hover {
+    color: aqua;
+   }
+  }
+}
+
+
+
+@media screen and (min-width: 992px) {
+ 
+  .ul-dropdown.open-dropdown {
+    width: 24%;
+    right: 9%;
+  }
+
+  .dropdown-li-icon {
+    margin-left: 125px;
+  }
+}
+
+/*Large devices Desktops (≥1200px)*/
+
+@media screen and (min-width: 1200px) {
+
+  .ul-dropdown.open-dropdown {
+    width: 18%;
+    right: 17%;
+  }
+
+  .dropdown-li-icon {
+    margin-left: 155px;
+  }
+}
+
+
+@media screen and (min-width: 1650px) {
+
+  .ul-dropdown.open-dropdown {
+    width: 18%;
+    right: 18%;
+  }
+
+  .dropdown-li-icon {
+    margin-left: 195px;
+  }
+}

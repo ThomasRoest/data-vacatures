@@ -1,0 +1,108 @@
+<% provide(:title, (t :payment_title)) %>
+<div class="form-panel">
+  <%= form_for @subscription, html: { id: 'payment-form' } do |f| %>
+    <input type="hidden" name="plan_id" value="<%= @plan.id %>" /> 
+    
+    <div class="form-panel-heading">
+      <h3><label for="email">Account: <%= current_user.email %></label></h3>
+      <p>Product: <%= @plan.description %> <%= formatted_price(@plan.amount) %></p>
+      <input type="email" name="email" id="hidden_email" style="width: 25em" value="<%= current_user.email %>" hidden="false"/>
+    </div>
+
+    <div class="form-panel-body">
+      <p class="payment-errors" style="color:#E53935;"></p>
+      <label for="number"><%= (t :payment_ccnumber) %></label>
+      <input type="text" class="input-default" size="20" data-stripe="number" id="number" placeholder="****************" pattern="[\d ]*" />
+      
+      <div class="cc-icons">
+        <span class="img-cc"><%= image_tag("icons/mastercard.png") %></span>
+        <span class="img-cc"><%= image_tag("icons/visa.png") %></span> 
+        <span class="img-cc"><%= image_tag("icons/amex.png") %></span>  
+      </div>
+    
+      <label for="cvc">CVC code</label>
+      <input type="text" class="input-default" style="width: 4em" data-stripe="cvc" id="cvc" placeholder="***" pattern="\d*"/>
+       
+      <label>Exp (MM/YYYY)</label>
+      <div class="label-margin">
+        <input style="width: 3em" type="text" class="date-field" size="2" id="exp-month" data-stripe="exp-month" placeholder="MM" pattern="\d*"/>
+        <span> / </span>
+        <input style="width: 4em" type="text" class="date-field" size="4" id="exp-year" data-stripe="exp-year" placeholder="YYYY" pattern="\d*"/>
+      </div><br>
+
+      <a href="#" id="show-coupon" class="btn btn-small btn-success margin-top">Kortingscode</a>
+      
+      <div id='form-coupon' class="hide">
+        <label>Kortingscode</label>
+          <div class="label-margin">
+            <input class="input-default" style="width: 10em" type='text' name="coupon" data-stripe='coupon'/>
+          </div>
+      </div>
+      
+      <button type="submit" class="btn btn-default-submit btn-primary btn-margin"><%= (t :payment_btn_buy) %></button>
+
+      <div class="text-center">
+        <img style="display: none;" src="<%= asset_path('well_spinner.gif') %>" id="spinner">
+      </div>
+     
+      <% end %>
+
+    </div><!--end panel body-->
+
+    <div class="form-panel-footer">
+      <div class="text-center">
+        <p><%= icon('lock') %> Veilige creditcard betalingen met</p>
+        <a href="http://stripe.com/nl"><%= image_tag("stripe_logo.png") %></a>
+      </div>
+    </div>
+</div><!--end panel-->
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+<script type="text/javascript">
+  $(function(){
+    Stripe.setPublishableKey('<%= Rails.configuration.stripe[:publishable_key] %>');
+  });
+
+  var errorMessages = {
+    incorrect_number: "Het creditcardnummer is onjuist.",
+    invalid_number: "Het creditcardnummer is onjuist.",
+    invalid_expiry_month: "De vervaldatum (maand) van de creditcard is onjuist.",
+    invalid_expiry_year: "De vervaldatum (jaar) van de creditcard is onjuist.",
+    invalid_cvc: "De CVC code is niet juist.",
+    expired_card: "Deze creditcard is verlopen.",
+    incorrect_cvc: "De CVC code is niet geldig.",
+    incorrect_zip: "The card's zip code failed validation.",
+    card_declined: "De creditcard is niet geldig",
+    missing: "There is no card on a customer that is being charged.",
+    processing_error: "Er is een fout opgetreden bij het verwerken van de creditcard.",
+    rate_limit:  "An error occurred due to requests hitting the API too quickly. Please let us know if you're consistently running into this error."
+
+  };
+  
+  $('#payment-form').submit(function(event) {
+    var form = $(this);
+    form.find('button').prop('disabled', true);
+    Stripe.createToken(form, stripeResponseHandler);
+    return false;
+  });
+
+  function stripeResponseHandler(status, response) {
+    var form = $('#payment-form');
+    if (response.error) {
+      form.find('.payment-errors').text(errorMessages[response.error.code]);
+      form.find('button').prop('disabled', false);
+    } else {
+      var token = response.id;
+      form.append($('<input type="hidden" name="stripeToken">').val(token));
+      form.get(0).submit();
+      $('#spinner').show();
+    }
+  }
+
+  $('#show-coupon').on('click', function(e){
+    e.preventDefault
+    $(this).hide()
+    $('#form-coupon').removeClass('hide');
+  })
+</script>

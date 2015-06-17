@@ -1,0 +1,10 @@
+<%= form_for(current_user.toprelations.build(topic_followed_id: @topic.id), remote: true) do |f| %>
+  <!-- build the toprelation and enter the topic followed id -->
+
+  <div><%= f.hidden_field :topic_followed_id %></div>
+  
+
+  <%= f.submit (t :topics_show_follow), class: "btn btn-primary" %>
+
+
+<% end %>

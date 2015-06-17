@@ -1,0 +1,65 @@
+<% provide(:title, (t :users_purchases_title)) %>
+<div class='box l-page-header background-lightblue'>
+		<h1 class="text-center"><%= (t :users_purchases_title) %>(<%= @subscriptions.count %>)</h1>
+		<%#= link_to 'Plaats een nieuwe vacature', subscriptions_path, class: 'btn btn-default btn-success btn-margin-bottom' %>
+	</div>
+<div class="box l-generic">
+	<div class="text-center">
+		<%= link_to "Een nieuwe vacature plaatsen?", subscriptions_path, class: 'btn btn-default btn-success' %>
+	</div>
+	
+	
+
+
+		<%# unless @card.data.blank? %>
+			<%#= link_to "Verwijder Creditcard", delete_card_path, method: :delete, data: { confirm: 'weet je zeker '}, class: 'btn btn-default btn-primary btn-purchases' %>
+		<%# end %>
+    <%# unless @user.stripe_customer_id.blank? %>
+		   <%#= link_to 'update Creditcard', updatecard_path %>
+		<%# end %>
+
+		<% @free_jobs.each do |j| %>
+		<ul class="ul-nostyle">
+			<li><strong>Gratis vacature</strong></li>
+			<li><%= (t :users_purchases_placed)%> <%= time_tag(j.created_at) %></li>
+			<li><%= link_to j.title, j, class: "btn btn-default btn-primary btn-purchases" %></li>
+			<li><%= link_to 'Delete', j, method: :delete, data: {confirm: 'Weet je het zeker?' }, class: 'btn btn-default btn-danger btn-purchases' %></li>
+		</ul>
+		<% end %>
+	
+		<% @subscriptions.each do |s| %>
+
+			<ul class="ul-nostyle">
+				<li><strong><%= (t :users_purchases_id) %> <%= s.id %></strong></li>
+				<li><%= (t :users_purchases_description) %><%#= formatted_price(s.amount) %> <%=(t :users_purchases_month) %></li>
+
+				<% if @jobs.where("guid=?", s.guid).exists? %>
+				<!-- checks if the user has jobs purchased with this sale -->
+					<% @jobs.where("guid=?", s.guid).each do |j| %>
+					
+						<li><%= (t :users_purchases_placed)%> <%= time_tag(j.created_at) %></li>
+						<li><%= link_to j.title + " | " + j.place, j, class: "btn btn-default btn-primary btn-purchases" %></li>
+               
+               <% if j.jobapplications.any? %>
+                <p>Sollicitaties: </p>
+                <% j.jobapplications.each do |application| %>
+						      <b><%= link_to application.name, application %></b> | 
+							  <% end %>
+							<% end %>
+
+					<% end %>
+				 <% else %>
+
+	   		  <li>
+	   		   <%= link_to (t :users_purchases_btn_add), newjob_path(guid: s.guid), class: "btn btn-default btn-success btn-purchases" %>
+	   		  </li>
+	   	   <% end %>
+
+				<li><%= link_to (t :users_purchases_btn_remove), s, method: :delete, data: { confirm: 'Weet je het zeker?' }, class: "btn btn-default btn-danger btn-purchases" %></li>
+				<!-- check for correct user? -->
+			</ul><hr>
+
+		<% end %>
+</div>
+
+

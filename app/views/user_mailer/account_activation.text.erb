@@ -1,0 +1,5 @@
+Hallo <%= @user.name %>, 
+
+Welkom op Datavacatures.nl, Activeer je account via de onderstaande link:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

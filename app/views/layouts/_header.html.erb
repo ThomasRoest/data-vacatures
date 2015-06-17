@@ -1,0 +1,87 @@
+
+<header class="l-main-header cf">
+
+  <!-- MOBILE NAV -->
+    <nav class="mobile-nav clearfix">
+      <%#= link_to image_tag("data.png", alt: 'De vacaturesite voor data specialisten'), root_path, class: "nav-li nav-li-left nav-li-logo" %>
+       <%= link_to image_tag("logo_header_xs.png", alt: 'De vacaturesite voor data specialisten'), root_path, class: "nav-li nav-li-left nav-li-logo" %>
+
+       <div class="header-icon-container">
+        <%= link_to icon('user', 'Vacatures'), jobs_path, class: "nav-li float-left nav-li-icon" %> 
+        <% if signed_in? %>
+            <%= link_to icon('list', 'Artikelen'), root_path, class: "nav-li float-left nav-li-icon" %>
+          <% else %>
+            <%= link_to icon('list', 'Artikelen'), posts_path, class: "nav-li float-left nav-li-icon" %>
+        <% end %>
+        
+        <%= link_to icon('graduation-cap', 'Leren'), courses_path, class: "nav-li float-left nav-li-icon" %>
+      </div>
+      
+      
+      <a id="ul-nav-toggle" class="nav-li nav-li-right nav-li-menu-signedin" href="#"><%= icon('bars')%><%= (t :nav_menu)%></a>
+      
+      <ul class="ul-nav" id="ul-nav-menu">
+
+        <% if signed_in? %>
+          <li><%= link_to icon('user', 'Account'), user_path(current_user) %></li>
+          <li><%= link_to icon('cog', 'Instellingen'), edit_user_path(current_user) %></li>
+          <li><%= link_to 'Vacatures', jobs_path %></li>  
+          <li><%= link_to 'Artikelen', root_path %></li>
+          <li><%= link_to 'Leren', courses_path %></li>
+          <li><%= link_to icon('sign-out', 'Afmelden'), signout_path, method: "delete" %></li>   
+        
+        <% else %>
+          <li><%= link_to icon('sign-in', 'Aanmelden'), signin_path %></li>
+          <li><%= link_to 'Vacatures', jobs_path %></li>  
+          <li><%= link_to 'Artikelen', posts_path %></li>
+          <li><%= link_to 'Leren', courses_path %></li>
+        <% end %>
+
+      </ul>
+    </nav>
+
+<!-- HORIZONTAL NAV -->
+
+  <nav class="horizontal-nav">
+    <ul class="ul-nav">
+      <%= link_to image_tag("data.png", alt: 'De vacaturesite voor data specialisten'), root_path, class: "nav-li nav-li-left nav-li-logo" %>
+        <% if signed_in? %>
+
+          <li><%= link_to icon("user", 'Vacatures'), jobs_path, class: 'nav-li nav-li-icon' %></li>      
+          <li><%= link_to icon("list", 'Artikelen'), root_path, class: 'nav-li nav-li-icon' %></li>
+          <li><%= link_to icon('graduation-cap', 'Leren '), courses_path, class: 'nav-li nav-li-icon' %></li>
+          <li><%= link_to icon('cube', 'Account'), '#', id: 'ul-dropdown-toggle', class: 'nav-li dropdown-li-icon' %></li>
+
+      <% else %>
+
+          <li><%= link_to icon("user", 'Vacatures'), jobs_path, class: 'nav-li nav-li-icon' %></li>
+          <li><%= link_to icon('list', 'Artikelen'), posts_path, class: 'nav-li nav-li-icon' %></li>
+          <li><%= link_to icon('graduation-cap', 'Leren  '), courses_path, class: 'nav-li nav-li-icon' %></li>      
+          <li><%= link_to icon('sign-in', 'Aanmelden'), signin_path, class: "dropdown-li-icon" %></li>
+         
+      <% end %>
+    </ul> 
+
+    <ul class="ul-dropdown" id="ul-dropdown-menu">
+      <% if signed_in? %>
+      <li><%= link_to icon('user', 'Account'), user_path(current_user) %></li>
+        <li><%= link_to icon('cog', 'Instellingen'), edit_user_path(current_user) %></li>
+        <li><%= link_to (t :nav_signout), signout_path, method: "delete" %></li>
+      <% else %>
+        <li><%= link_to (t :nav_signin), signin_path  %></li>
+      <% end %>
+    </ul> 
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+

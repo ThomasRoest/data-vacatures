@@ -1,0 +1,5 @@
+en:
+  flash_jobs_create: "Job listing added"
+  flash_jobs_error: "Could not be saved"
+  flash_jobs_update: "Job listing updated"
+  flash_jobs_delete: "Vacature verwijderd"

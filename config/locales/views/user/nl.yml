@@ -1,0 +1,47 @@
+nl:
+#user form fields
+  simple_form:
+    labels:
+      user:
+        name: "Naam"
+        email: "Email"
+        password: "Wachtwoord (minimaal 6 tekens)"
+        password_confirmation: "Bevestig wachtwoord"
+        university: "Over jezelf"
+        avatar: "Profiel afbeelding"
+    placeholders:
+      user:
+        name: "Naam"
+        email: "Email"
+        password: "Wachtwoord"
+        password_confirmation: "Bevestig wachtwoord"
+        university: "Over jezelf"
+  #user buttons
+  helpers:
+    submit:
+      user:
+        create: "Registreren"
+        update: "Wijzigingen opslaan"
+  #form titles     
+  users_new_title: "Registreren"
+  users_edit_title: "Wijzig instellingen"
+  #user show
+  users_show_title: "Profiel"
+  users_show_bio: "instellingen"
+  users_show_btn_jobs: "Mijn vacatures"
+  users_show_posts_list: "Alle berichten "
+  users_show_follow: "Volgen"
+  users_show_unfollow: "Niet meer volgen"
+  user_stats_following: "Volgend"
+  user_stats_followers: "Volgers"
+  users_index_title: "Alle gebruikers"
+  #purchases page
+  users_purchases_title: "Mijn Vacatures"
+  users_purchases_id: "Aankoop id:"
+  users_purchases_description: "Vacature basis - "
+  users_purchases_month: "Maandelijks"
+  users_purchases_placed: "Vacature geplaatst op: "
+  users_purchases_btn_add: "Plaats vacature"
+  users_purchases_btn_remove: "Verwijder vacature"
+  users_purchases_btn_new: "Plaats een nieuwe vacature"
+

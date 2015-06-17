@@ -1,0 +1,17 @@
+nl:
+#form fields
+  simple_form:
+    labels:
+      comment:
+        content: "Reactie"   
+    placeholders:
+      comment:
+        content: "Voeg reactie toe"
+  helpers:
+   submit:
+     comment:
+       create: "Plaats reactie"
+       update: "Wijzig reactie"
+#other
+  comments_edit_title: "Wijzig reactie"
+  comments_new_title: "Plaats reactie"

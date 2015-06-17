@@ -1,0 +1,55 @@
+.main-footer {
+  width: 100%;
+  height: 211px;
+  // also set main container padding bottom
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ECEFF1;
+}
+
+.footer-container {
+  padding-top: 1em;
+  max-width: 650px;
+  margin: 0 auto;
+  clear: both;
+  display: table;
+}
+
+.footer-links ul {
+  color: #fff;
+  float: left;
+  list-style: none;
+}
+
+.footer-links li {
+	color: #ccc;
+  margin-top: 0.1em;
+}
+
+.footer-links li a {
+  color: #697981;
+   &:hover {
+    color: aqua;
+  }
+  &:active {
+    color: aqua;
+  }
+  &:focus {
+    color: aqua;
+  }
+}
+.li-head {
+  text-transform: uppercase;
+}
+.datestamp {
+  margin: 0;
+  color: #ccc;
+}
+.datestamp-small {
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+.footer-icons {
+  margin-bottom: 0.7em;
+}

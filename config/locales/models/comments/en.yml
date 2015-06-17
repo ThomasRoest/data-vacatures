@@ -1,0 +1,5 @@
+en:
+  flash_comments_create: "Comment posted"
+  flash_comments_error: "Could not be saved"
+  flash_comments_update: "Comment updated"
+  flash_comments_destroy: "Comment removed"

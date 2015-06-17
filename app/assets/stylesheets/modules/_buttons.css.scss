@@ -1,0 +1,289 @@
+/*button colors*/
+
+
+/*<%= link_to 'Your job here?', jobs_pricing_path, class: "button button-default button-green" %>*/
+.btn {
+display: inline-block;
+// margin: 0;
+font-weight: 700;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 3px;
+&:hover {
+  text-decoration: none;
+ };
+}
+
+/*sizes*/
+
+.btn-landing {
+  border-radius: 2px;
+  padding: 1.2em 0em 1.2em 0em;
+  min-width: 200px;
+}
+
+.btn-default {
+  padding: 10px;
+}
+
+.btn-default-submit {
+  margin-top: 35px;
+  height: 47px;
+  width: 100%;
+}
+
+.btn-small {
+  padding: 4px;
+  min-width: 7em;
+  max-width: 15em;
+  height: 32px;
+}
+
+.btn-small-height {
+  padding: 4px;
+  height: 32px;
+}
+
+.btn-medium {
+  padding: 11px;
+  height: 45px;
+  width: 100px;
+}
+
+.btn-large {
+  padding: 11px 14px;
+  height: 45px;
+  width: 200px;
+}
+
+/*colors*/
+
+
+.btn-danger {
+  color: #fff;
+  background-color: $btn-danger;
+  box-shadow: 0 3px 0 0 $btn-danger-hover;
+  &:hover {
+    background-color: $btn-danger-hover;
+    color: #fff;
+  }
+  &:active {
+    background-color: $btn-danger-active;
+  }
+  &:focus {
+    background-color: $btn-danger-active;
+  }
+}
+
+.btn-success {
+  color: #fff;
+  background-color: $btn-success;
+  box-shadow: 0 3px 0 0 $btn-success-hover;
+  &:hover {
+    background-color: $btn-success-hover;
+    color: #fff;
+  }
+  &:active {
+    background-color: $btn-success-active;
+  }
+  &:focus {
+    background-color: $btn-success-active;
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $btn-primary;
+  box-shadow: 0 3px 0 0 $btn-primary-hover;
+  &:hover {
+    background-color: $btn-primary-hover;
+    color: #fff; 
+  }
+  &:active {
+    background-color: $btn-primary-active;
+  }
+  &:focus {
+    background-color: $btn-primary-active;
+  }
+}
+
+.btn-brightgreen {
+  color: #fff;
+  background-color: $btn-brightgreen;
+  box-shadow: 0 3px 0 0 $btn-brightgreen-hover;
+  &:hover {
+    background-color: $btn-brightgreen-hover;
+    color: #fff; 
+  }
+  &:active {
+    background-color: $btn-brightgreen-active;    
+  }
+  &:focus {
+    background-color: $btn-brightgreen-active;
+  }
+}
+
+.btn-landing-jobs {
+  color: #fff;
+  background-color: $btn-brightgreen;
+  &:hover {
+    background-color: $btn-brightgreen-hover; 
+    color: #fff;
+  }
+  &:active {
+    background-color: $btn-brightgreen-active;    
+  }
+  &:focus {
+    background-color: $btn-brightgreen-active;
+  }
+}
+.btn-landing-news {
+  color: #fff;
+  background-color: #275283;
+  &:hover {
+    background-color: #184573; 
+    color: #fff;
+  }
+  &:active {
+    background-color: #072460;    
+  }
+  &:focus {
+    background-color: #072460;
+  }
+}
+
+.btn-transparent {
+  color: #757575;
+  border: 1px solid #757575;
+  &:hover {
+    color: $light-grey;
+    background-color: #757575
+  }
+  &:active {
+    background-color: #757575    
+  }
+  &:focus {
+    background-color: #757575
+  }
+}
+
+.btn-transparent-blue {
+  color: #3F51B5;
+  border: 2px solid #3F51B5;
+  
+  &:hover {
+    color: $light-grey;
+    background-color: #3F51B5;
+  }
+  &:active {
+    background-color: #3F51B5;
+  }
+  &:focus {
+    background-color: #3F51B5;
+  }
+}
+
+/*specific*/
+.btn-bold {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.btn-margin {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.btn-margin-top {
+  margin-top: 0.5em;
+}
+.btn-margin-bottom {
+  margin-bottom: 1em;
+}
+.btn-float-right { 
+  float: right;
+}
+
+.btn-purchases {
+  height: 32px;
+  padding: 3px;
+  margin-top: 10px;
+}
+
+.btn-posts-new {
+  margin: 1em 0 1em 0;
+  float: right;
+  max-width: 5em;
+  padding: 0.3em;
+}
+.btn-signup {
+  color: #333;
+  padding: 10px;
+  &:hover {
+    color: $btn-primary;
+  }
+}
+
+.btn-modal-posts-new {
+  padding: 0.3em;
+}
+
+.btn-modal {
+  margin-top: 2em;
+}
+
+.btn-modal-form {
+  // #in jobs#new
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.container-back {
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.float-right {
+  float: right;
+}
+.btn-search {
+  width: 45px;
+  height: 32px;
+  margin-bottom: 3px;
+  background-color: #3F51B5;
+}
+
+.btn-search-margin {
+  margin-left: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-search {
+    width: 50px;
+    height: 35px;
+    // margin: 0 0 0 2em; 
+  }
+  
+}
+
+@media screen and (min-width: 1200px){
+  .btn-transition {
+    transition: 0.3s;
+  }
+  .btn {
+    transition: .2s;
+  }
+}
+
+
+
+// .btn-transition {
+//   transition: 0.3s;
+// }

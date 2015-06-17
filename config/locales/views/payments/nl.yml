@@ -1,0 +1,21 @@
+nl:
+  pricing_title: "Vacatures | prijzen"
+  pricing_header: "Plaats een vacature"
+  pricing_to_payments: "Naar betaling"
+  pricing_month: "Maandelijks"
+  payment_title: "Betaling"
+  payment_ccnumber: "Credit Card Nummer"
+  payment_btn_buy: "Plaats een vacature"
+  flash_pickup_success: "Betaling verwerkt, plaats nu de vacature!"
+
+  #receipt mailer
+  receipt_mailer_title: "Datavacature.nl factuur"
+  receipt_mailer_1: "Bedankt voor uw aankoop, uw factuur vind u in de bijlage. "
+  receipt_mailer_2: "U heeft gekocht: "
+  receipt_mailer_3: "Plaats hier de vacature als u dat nog niet heeft gedaan!"
+  receipt_mailer_4: "Factuur nr: "
+  receipt_mailer_5: "Account: "
+  receipt_mailer_6: "Heeft u vragen?, neem contact op: "
+  job_delete_mailer_title: "Datavacature: Vacature verwijderd"
+  job_delete_mailer_1: "Uw vacature is verwijderd."
+  job_delete_mailer_2: "Een nieuwe vacature plaatsen?"

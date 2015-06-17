@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	</head>
+	<body style="font-family:sans-serif">
+		 <h3>Datavacature.nl: Nieuwe sollicitatie</h3>
+			<p><%= (t :jobapplication_email_1) %> </p>
+			<h2><%= @jobapplication.job.title %></h2>
+			<p><%= @jobapplication.job.company %></p>
+			<p><%= @jobapplication.job.place %></p>
+			<p>Ga naar uw <b><%= link_to 'Dashboard', mijn_vacatures_user_url(@jobapplication.job.user) %></b> om de sollicitatie te bekijken.</p>
+			<hr>
+			<p><b><%= link_to 'Datavacature.nl', 'https://datavacature.nl' %></b></p>
+	</body>
+</html>

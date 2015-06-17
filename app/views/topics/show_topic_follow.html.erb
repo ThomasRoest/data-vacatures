@@ -1,0 +1,19 @@
+<% provide(:title, @title) %>
+<div class="box l-generic">
+  <section>
+     <h1 class="text-center"><%= @topic.name %></h1></br> 
+  </section>
+  <section>
+    <%#= render 'shared/stats' %>
+  </section> 
+</br>
+  <div>
+    <h3 class="text-center"><%= @title %></h3><hr>
+    <% if @topics.any? %>
+      <ul class="ul-user-index">
+        <%= render @topics %>
+      </ul>
+        <%= will_paginate %>
+    <% end %>
+  </div>
+</div>

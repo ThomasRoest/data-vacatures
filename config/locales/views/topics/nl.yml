@@ -1,0 +1,26 @@
+nl:
+#user form fields
+  simple_form:
+    labels:
+      topic:
+        name: "Naam onderwerp"
+    placeholders:
+      topic:
+        name: "Naam onderwerp"  
+  #user buttons
+  helpers:
+    submit:
+      topic:
+        create: "Nieuw ondewerp"
+        update: "Wijzig"
+  #form titles 
+  topics_new_title: "Nieuw onderwerp"    
+  topics_index_title: "Volgen"
+  topics_index_followers: "Volgers"
+  topics_edit_title: "Wijzig onderwerp"
+  topics_show_title: "Onderwerp"
+  topics_show_followers: "Volgers"
+  topics_show_follow: "Volg dit onderwerp"
+  topics_show_unfollow: "Niet meer volgen"
+  topics_show_postslist: "Alle berichten in "
+

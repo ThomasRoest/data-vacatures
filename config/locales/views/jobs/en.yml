@@ -1,0 +1,35 @@
+en:
+#form fields
+  simple_form:
+    labels:
+      job:
+        company: "Company"
+        place: "Country"
+        title: "Job Title"
+        job_type: "Dienstverband"
+        email: "Contact Email"
+        avatar: "Company Logo"
+    placeholders:
+      job:
+        company: "Add Company"
+        place: "Add Country"
+        title: "Add Job Title"
+        email: "Add contact email"
+  helpers:
+   submit:
+     job:
+       create: "Add new job listing"
+       update: "Update this job listing"
+#other
+  jobs_new_title: "Add a new job"
+  jobs_edit_title: "Edit job listing"
+  jobs_new_edit_epicfield: "Add Job description"
+  jobs_btn_markdown: "Use Markdown"
+  jobs_show_btn_edit: "Edit Job"
+  jobs_show_btn_apply: "Apply for this Job"
+  jobs_show_posted_by: "Posted by"
+  jobs_show_country: "Country"
+  jobs_index_title: "Data Jobs"
+  jobs_index_btn: "Add a Job listing"
+  jobs_index_nojobs: "Add the first job listing!"
+

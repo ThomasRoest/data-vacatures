@@ -1,0 +1,29 @@
+nl:
+#form fields
+  simple_form:
+    labels:
+      post:
+        title: "Titel"   
+    placeholders:
+      post:
+        title: "Titel bericht"
+        topic: "Selecteer onderwerp" 
+        video_url: "Video link"     
+  helpers:
+   submit:
+     post:
+       create: "Plaats"
+       update: "Wijzig"
+#other
+  posts_new_markdown: "Gebruik Markdown"
+  posts_index_newpost: "Plaats een nieuw bericht!"
+  posts_index_noposts: "Ga naar de onderwerpen pagina om onderwerpen te volgen"
+  posts_index_noposts_jobs: "Of bekijk de vacatures"
+  posts_index_noposts_btn: "Naar onderwerpen"
+  posts_index_noposts_btn_jobs: "Naar de vacatures"
+  posts_show_posted_in: "Geplaatst in "
+  posts_show_btnback: "Ga terug"
+  posts_edit_title: "Wijzig bericht"
+
+  
+

@@ -1,0 +1,8 @@
+
+<a id="show-comment-form" class="btn btn-default btn-success"><%= (t :comments_new_title) %></a>
+<div class="comment-form hide">
+<%= simple_form_for([@post, Comment.new]) do |c| %>
+	<%= c.input :content, input_html: {class: "input-default"} %>
+	<%= c.button :submit, class: "btn btn-default-submit btn-success" %>
+<% end %>
+</div>

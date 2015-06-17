@@ -1,0 +1,63 @@
+<% provide(:title, (t :pricing_title)) %>
+<% meta description: (t :description_subscriptions) %>
+
+
+<div class="l-page-header l-page-header-offset pageheader-background-blue">
+  <div class="box-large">
+    <h1 class="h1-sub-index">
+      <%= (t :pricing_header) %><%= icon('pencil-square-o', '',class: 'icon-pencil-subscriptions') %>
+    </h1>
+  </div>
+</div>
+
+
+<div class="panel panel-large l-box-offset">
+
+  <div class="panel-body">	
+		<ul class='ul-nostyle ul-basic list-left ul-product-usp'>
+      <li>
+        <%= icon('check-circle', '', class: 'icon-green' ) %>
+        Bereik data-specialisten &amp; professionals
+      </li>
+			<li>
+        <%= icon('check-circle', '', class: 'icon-green' ) %>
+        Eenvoudig en snel vacatures plaatsen en beheren
+      </li>
+			<li>
+        <%= icon('check-circle', '', class: 'icon-green' ) %>
+        Gedeeld op social media
+        <%= link_to icon('twitter'), 'https://twitter.com/datavacature' %>
+        <%= link_to icon('linkedin'), 'https://www.linkedin.com/company/datavacature-nl' %>
+      </li>
+			<li>
+        <%= icon('check-circle', '', class: 'icon-green' ) %> 
+        Veilig en gemakkelijk betalen
+        <%= icon('lock') %>
+      </li>
+      <li class="cc-icons">
+        <span class="img-cc"><%= image_tag("icons/mastercard.png") %></span>
+        <span class="img-cc"><%= image_tag("icons/visa.png") %></span> 
+        <span class="img-cc"><%= image_tag("icons/amex.png") %></span><br/><br>
+        <span class="img-cc"><%= link_to image_tag("stripe_badge.png"), "https://stripe.com/nl" %></span>
+        
+           <!-- <span class="img-cc"><%#= link_to icon('question-circle'), '#', id: 'open-stripe-modal' %></span> -->
+      </li>
+		</ul><br>
+
+    <% @plans.each do |plan| %>
+      <ul class="ul-pricing-list ul-nostyle">
+        <li><strong>1 Vacature</strong></li>
+        <li><span class="pricing-amount">€25</span></li>
+        <li>Per maand</li>
+        <li><%= link_to "Selecteer", new_subscription_path(plan_id: plan.id), 
+                                     class: 'btn btn-default btn-success' %></li>
+      </ul>
+    <% end %>   
+  </div>
+
+  <div class="panel-footer">
+    <div class="text-center">
+      <%= link_to icon('envelope-o', 'Vragen? Stuur ons een bericht!'), contact_path, class: 'btn btn-default btn-transparent btn-margin-top' %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+nl:
+#user form fields
+  simple_form:
+    labels:
+      contact:
+        name: "Naam"
+        email: "Email"
+        content: "Bericht"
+    placeholders:
+      contact:
+        name: "Naam"
+        email: "Email"
+        content: "Bericht"
+  #user buttons
+  helpers:
+    submit:
+      contact:
+        create: "Verstuur bericht"
+  #form titles     
+  contacts_new_title: "Neem contact op"

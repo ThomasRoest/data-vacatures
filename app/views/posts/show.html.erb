@@ -1,0 +1,80 @@
+<% provide(:title, @post.title)%>
+<% meta description: @post.title %>
+
+<div class="box l-posts-show-header background-lightblue">
+  <p class="timestamp topic-link">
+    <%= (t :posts_show_posted_in) %>
+    <strong><%= link_to @post.topic.name, @post.topic, class: "s-hover-link" %></strong>
+  </p>
+  <h1>
+    <% if @post.embed_url.present? %>
+      <%= icon('play-circle-o') %>
+    <% end %> 
+    <%= @post.title.capitalize %>
+  </h1>
+    <div class='media attribution media-show-post'>
+      <%= link_to (image_tag @post.user.avatar.url(:thumb), class: "img img-round img-link img-tiny"), @post.user %>
+      <div class="media-body">
+        <strong><%= link_to @post.user.name, @post.user, class: "s-hover-link" %> </strong>
+          <span class="timestamp text-inline">
+            <%= time_tag(@post.created_at) %> 
+          </span>
+      </div>
+    </div>
+</div>
+
+<div class="box l-show-post l-box-shadow">
+  <div class="l-user-content">
+    <%= sanitize @post.content, tags: %w(iframe h1 h2 h3 h4 p strong ol ul li a img), 
+                                attributes: %w(href src alt width height) %>
+  </div>
+   
+    <% if @post.embed_url? %>
+        <div class="embed-container">
+          <%= embed(@post.embed_url) %>      
+        </div>
+    <% end %>
+
+  <div class="posts-show-options">
+    <% if current_user?(@post.user) %>
+      <%= link_to "Edit", edit_post_path(@post) %>
+      -
+      <%= link_to"Delete", @post, method: :delete, data: { confirm: "You sure?" }, title: @post.content %>
+    <% end %>
+  </div>
+   
+
+</div><!--end box show post-->
+
+<div class="box l-comments-show l-box-shadow">
+<% if signed_in? %>
+  <%= render 'shared/comment_form' %>
+  <% else %>
+  <p><%= link_to'Meld je aan om een reactie te plaatsen', signin_path %></p>
+<% end %>
+    <div class="comments-container">
+      <% @comment.each do |c| %>
+        <div class="media attribution">
+          <%= link_to (image_tag c.user.avatar.url(:thumb), class: "img img-round img-link img-tiny"), c.user %>
+          <div class="media-body">
+            <%= c.content %><br>
+            <p class="timestamp"><%= time_tag(c.created_at) %>
+            <%= link_to c.user.name, user_path(c.user_id), class: "s-hover-link" %></p>
+            <% if current_user?(c.user) %>
+              <%= link_to "Edit", edit_post_comment_path(c.post_id, c.id) %>
+              -
+              <%= link_to "Delete", post_comment_path(c.post_id, c.id),  
+                                          method: :delete,
+                                          data: { confirm: "You sure?" },
+                                          title: c.content %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+      <div class="text-center">
+        <%= link_to (t :posts_show_btnback), posts_path, class: 'btn btn-small btn-primary' %> 
+      </div>
+    </div>
+</div>
+
+

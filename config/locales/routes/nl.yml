@@ -1,0 +1,13 @@
+nl:
+  routes:
+    users: accounts
+    purchases: mijn-vacatures
+    following: volgend
+    followers: volgers
+    topics: onderwerpen
+    topic_followers: volgers
+    posts: nieuws-artikelen
+    jobs: vacatures
+    subscriptions: abonnementen
+    jobapplications: sollicitaties
+    courses: leer-online

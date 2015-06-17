@@ -1,0 +1,17 @@
+en:
+#form fields
+  simple_form:
+    labels:
+      comment:
+        content: "content"   
+    placeholders:
+      comment:
+        content: "Add comment"
+  helpers:
+   submit:
+     comment:
+       create: "Add comment"
+       update: "Edit comment"
+#other
+  comments_edit_title: "Edit comment"
+  comments_new_title: "Add comment"

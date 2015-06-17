@@ -1,0 +1,4 @@
+en:
+  flash_posts_create: "Post created!"
+  flash_posts_destroy: "Post removed"
+  flash_posts_update: "Post updated"

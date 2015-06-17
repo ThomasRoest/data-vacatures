@@ -1,0 +1,30 @@
+<div class="main-footer">
+      <div class="footer-container">
+      	<div class="footer-links">
+      		<ul>
+      			<li class="li-head"><b><%= (t :footer_content) %></b></li>
+                        <li><%= link_to (t :footer_jobs), jobs_path, class: 's-hover-link' %></li>
+      			<li><%= link_to (t :footer_home), topics_path, class: 's-hover-link' %></li>
+      		</ul>
+      		<ul>
+      			<li class="li-head"><b><%= (t :footer_about) %></b></li>
+      			<li><%= link_to (t :footer_about), about_path, class: 's-hover-link' %></li>
+      			<li><%= link_to (t :footer_contact), contact_path, class: 's-hover-link' %></li>                     
+      		</ul>
+             <%#= link_to icon('envelope-o', 'Stuur ons een bericht!'), contact_path, class: 'footer-link-message' %>
+      	</div>
+      </div>
+      <div class="center footer-icons">
+         <a href='https://twitter.com/datavacature' class="icon-twitter-footer"> 
+           <%= icon('twitter', '', class: 'icon-circle-footer') %>
+         </a>
+         <a href='https://www.linkedin.com/company/datavacature-nl' class="icon-linkedin-footer">
+           <%= icon('linkedin', '', class: 'icon-circle-footer') %>
+         </a>
+        
+      </div>
+
+
+      <p class="datestamp text-center">Datavacature 2015 &nbsp; | &nbsp; <%= link_to 'Privacy & Cookieverklaring', privacycookies_path, class: 'datestamp' %> | KvK: 62612875</p>
+</div>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <body style="font-family:Arial, sans-serif">
+     <p style="font-weight:bold;color:#ccc;">Datavacature.nl: uw bestelling is afgerond</p>
+     <h2>Factuur nr: #<%= @subscription.id %></h2>
+     
+     <p>Product: Vacature &euro; 25 per maand.</p>
+     <p>Datum: <%= Time.at(@invoice.date).strftime("%d/%m/%Y") %></p>
+    <!--  <p>Periode: <%#= Time.at(@invoice.period_start).strftime("%d/%m/%Y") %> tot <%#= Time.at(@invoice.period_end).strftime("%d/%m/%Y") %></p>  -->
+       <!-- <p> tot <%#= @invoice %></p>  -->
+        <!--   <p>Uw aankoop: "<%#= @subscription['plan']['name'] %>" is verwijderd.</p> -->
+    <hr>
+    
+       <p>Subtotaal: <%= sprintf("€%0.2f", @invoice.total / 100.0 * 0.79) %></p>
+       <p>BTW 21%:   <%= sprintf("€%0.2f", @invoice.total / 100.0 * 0.21) %></p>
+       <p>Betaald:   <%= sprintf("€%0.2f", @invoice.total / 100.0) %></p>    
+
+    <hr>
+
+       <h3>Klant gegevens:</h3>
+       <p>E-mail: <%= @user.email %></p>
+       <p>Naam: <%= @user.name %><p>
+      
+       <h4>Ga naar uw <%= link_to "dashboard", mijn_vacatures_user_url(@user) %> om uw vacatures te beheren</h4>
+
+    <p>
+      Heeft u vragen?
+      <a href="mailto:contact@datavacature.nl">contact@datavacature.nl</a>
+  </p>
+    <p style="font-weight:bold;text-align:center">
+      <a href="https://datavacature.nl" style="text-decoration:none">Datavacature.nl</a>
+    </p>
+    
+   
+
+  </body>
+</html>
+

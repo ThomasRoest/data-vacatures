@@ -1,0 +1,17 @@
+
+
+<%# unless current_user?(@user) %> <!--buttons only appear if not current user, not necessary in this situation -->
+
+  <div id="follow_form">
+  	<!-- <p>Currently following: <%#= @user.toprelations.first.topic_followed_id %></p> -->
+  <% if current_user.topic_following?(@topic) %>
+
+  
+    <%= render 'topicunfollow' %>
+  <% else %>
+
+    <%= render 'topicfollow' %>
+
+  <% end %>
+
+  </div>

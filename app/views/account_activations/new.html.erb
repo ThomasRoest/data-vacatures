@@ -1,0 +1,9 @@
+<% provide(:title, (t :accounts_activation_new)) %>
+  <div class="form-container">
+	<h1 class='text-center'><%= t(:accounts_activation_new) %></h1>
+	  <%= simple_form_for(:account_activation, url: account_activations_path, 
+	                    defaults: { input_html: {class: "input-default"} }) do |f| %>
+	    <%= f.input :email, autofocus: true, placeholder: (t :password_resets_placeholder) %>
+	    <%= f.button :submit, (t :accounts_activation_new_btn), class: 'btn btn-default-submit btn-primary' %>
+	  <% end %>
+  </div>

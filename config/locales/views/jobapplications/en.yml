@@ -1,0 +1,29 @@
+en:
+  simple_form:
+    labels:
+      jobapplication:
+        name: "Name"
+        email: "Email"
+        content: "Motivation"
+        cv: "Resume / CV"
+        letter: "Cover letter"
+    placeholders:
+      jobapplication:
+        name: "Enter name"
+        email: "Enter email"
+        content: "yes I want this job!"
+  helpers:
+    submit:
+       jobapplication:
+         create: "Send application"
+
+#other
+  jobapplications_new_title: "Apply for this job"
+#application mail
+  jobapplication_email_title: "Data-Vacature, Application: "
+  jobapplication_email_1: "This visitor applied for the following job position:"
+  jobapplication_confirm_title: "Thank you for your application"
+  jobapplication_confirm_1: "Thank you for applying for the following position:"
+
+
+  

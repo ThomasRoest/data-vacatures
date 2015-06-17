@@ -1,0 +1,27 @@
+.l-show-post {
+	background-color: #fff;
+	padding: 0.5em 1em 1.5em 1em;
+	h2 {
+		margin: 0em 0 0.5em 0;
+	}
+	.media.attribution {
+		padding-bottom: 0.7em;
+	}
+}
+
+.posts-show-options {
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+	.l-show-post {
+		padding: 2em;
+		h2 {
+			margin: 0.5em 0 0.5em 0;
+		}
+		.topic-link {
+			margin-top: 0.5em;
+		}
+	}
+}

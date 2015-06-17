@@ -1,0 +1,41 @@
+// .feed-item-title {
+// 	font-size: 16px;
+// }
+
+h1,h2,h3,h4,h5,h6 {
+	color: #333333;
+}
+
+h1 {
+	font-size: 1.50em;
+	// 21 px
+}
+
+h2 {
+	font-size: 1.2em;
+	//  px
+}
+
+h3 {
+	font-size: 1.125em;
+	// 16px
+}
+
+p {
+	font-size: 1em;
+	color: #333333;
+	// 14px
+}
+
+.title-blue {
+	color: #1A237E;
+}
+.feed-item-title {
+	font-size: 1.125em;
+}
+
+@media screen and (min-width: 768px) {
+	.feed-item-title {
+		font-size: 1.250em;
+	}
+}

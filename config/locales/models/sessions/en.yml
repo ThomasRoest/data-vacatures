@@ -1,0 +1,6 @@
+en:
+  flash_sessions_error: "Invalid email/password combination"
+  flash_errors_signin: "Please sign in"
+  flash_password_reset: "Instructions for resetting your password have been sent."
+  flash_password_reset_exp: "Password reset has expired"
+  flash_password_reset_success: "Password has been reset"

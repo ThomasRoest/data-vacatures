@@ -1,0 +1,147 @@
+
+.img-tiny {
+  height: 25px;
+  width: 25px;
+}
+
+.img-thumb {
+  height: 35px;
+  width: 35px;
+}
+
+.thumb {
+  height: 42px;
+  width: 42px;
+}
+
+// pff nice
+
+.img-small {
+  height: 65px;
+  width: 65px;
+}
+
+.img-medium {
+  height: 85px;
+  width: 85px;
+}
+.img-profile {
+  width: 145px;
+  height: 145px;
+  box-shadow: 1px 1px 1px #ccc;
+}
+.profile-picture-form {
+  border: 1px solid blue;
+  border-radius: 50%;
+  padding: 5px;
+}
+.img-round {
+  border-radius: 50%;
+}
+.img-link {
+  &:active {
+    border: 3px solid aqua;
+  }
+}
+.topic-image {
+  height: 75px;
+  widht: 75px
+}
+.img-job {
+  max-width: 120px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1em;
+}
+
+.img-show-editor {
+  width: 35px;
+  height: 35px;
+}
+.img-subscriptions-index {
+  margin-top: 3em;
+}
+
+.img-chart-lp {
+  // position: relative;
+  // top: -50px;
+  // right: -150px;
+  // height: 15em;
+  // width: 20em;
+  img {
+    max-width: 10em;
+  }
+}
+
+.img-grid-logo {
+  height: 2em;
+  float: right;
+}
+
+.pageheader-blue {
+  // background: #0091EA;
+  background: #0091EA;
+}
+
+.pageheader-background-blue {
+  background: #0091EA image-url('dv_2_h160px.png') no-repeat right;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+  h1 {
+    color: #fff;
+  }
+}
+
+.pageheader-background-purple {
+   background: #9C27B0 image-url('dv_2_h160px.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pageheader-background-green {
+  background: #5fcf80 image-url('dv_2_h160px.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pageheader-background-blue2 {
+  background: #651FFF image-url('dv_2_h160px.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pageheader-background-blue-job {
+  background: #0091EA image-url('dv_2_h160b20.png') center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+// dv_2_h160b20.png
+// dv_1_bright_jobshow.png
+@media screen and (min-width: 768px){
+  .img-job {
+    max-width: 100%;
+    margin-top: 1em;
+  }
+}
+
+@media screen and (min-width: 1200px){
+.img-chart-lp {
+  // top: 43%;
+  // // right: 0;
+  // // height: 20em;
+  // // width: 30em;
+ }
+}
+
+
+// #3F51B5

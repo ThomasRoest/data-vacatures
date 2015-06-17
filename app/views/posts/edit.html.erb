@@ -1,0 +1,44 @@
+<% provide(:title, (t :posts_edit_title)) %>
+<div class="box l-page-header background-blue">
+		<h1 class="text-center"><%= (t :posts_edit_title ) %></h1>
+	</div>
+
+<div class="box l-text-editor">
+
+		<%= simple_form_for(@post) do |f| %>
+		<%#= render 'shared/error_messages', object: f.object %>
+			<%= f.input :title, input_html: { class: "field-default" } %>
+			<%= f.input_field :content,
+												value: @post.markdown,
+			                  id: "parsed_markdown",  
+			                  label: false,
+			                  as: :hidden %>
+			<div id="epiceditor"></div>
+
+			<div class="select-topic">
+				<%= f.association :topic, as: :select, input_html: { class: "field-default field-select" } %>
+			</div>
+
+			<%= f.input :video_url, input_html: { class: "field-default embed-input"}, label: false %>
+			<%= f.input :markdown, as: :hidden %>
+
+			<div>
+				<%= f.button :submit, class: "btn btn-brightgreen btn-posts-new", id: 'submit-post-form' %>
+				<%= link_to (t :posts_new_markdown), "", class: "btn btn-small-height btn-primary", id: "markdown-options-btn" %>
+				<%= image_tag("icons/play.png", class: "icon-show-embed-url img-link", id: "show-embed-url")%>
+			</div>
+		<% end %>
+</div>
+
+ <script type="text/javascript">
+   $(document).ready(function(){
+   		var editor = new EpicEditor().load();
+
+   		$("#submit-post-form").click(function(e){
+        e.preventDefault();
+        var theMarkdown = editor.exportFile();
+        $("#post_markdown").val(theMarkdown);
+        $(".edit_post").submit();
+      });
+   });
+</script>

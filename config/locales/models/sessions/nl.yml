@@ -1,0 +1,6 @@
+nl:
+  flash_sessions_error: "Onjuiste email/wachtwoord combinatie"
+  flash_errors_signin: "Meld je aan om verder te gaan."
+  flash_password_reset: "Instructies voor een nieuw wachtwoord zijn verstuurd"
+  flash_password_reset_exp: "Dit wachtwoord herstel is verlopen, probeer opnieuw."
+  flash_password_reset_success: "Nieuw wachtwoord is ingesteld."

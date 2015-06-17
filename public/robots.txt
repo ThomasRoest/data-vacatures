@@ -1,0 +1,9 @@
+# See http://www.robotstxt.org/wc/norobots.html for documentation on how to use the robots.txt file
+#
+# To ban all spiders from the entire site uncomment the next two lines:
+User-agent: *
+Disallow: /privacycookies
+Disallow: /account_activations/new
+Disallow: /sollicitaties
+Sitemap: https://www.datavacature.nl/sitemap.xml.gz
+

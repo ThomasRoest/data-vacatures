@@ -1,0 +1,20 @@
+en:
+#user form fields
+  simple_form:
+    labels:
+      contact:
+        name: "Name"
+        email: "Email"
+        content: "Content"
+    placeholders:
+      contact:
+        name: "Your name"
+        email: "Enter email"
+        content: "Message"
+  #user buttons
+  helpers:
+    submit:
+      contact:
+        create: "Send message"
+  #form titles     
+  contacts_new_title: "Contact us"

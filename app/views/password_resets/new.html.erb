@@ -1,0 +1,9 @@
+<% provide(:title, (t :password_resets_title)) %>
+  <div class="form-container">
+	<h1 class='text-center'><%= t(:password_resets_title) %></h1>
+	  <%= simple_form_for(:password_reset, url: password_resets_path, 
+	                    defaults: { input_html: {class: "input-default"} }) do |f| %>
+	    <%= f.input :email, autofocus: true, placeholder: (t :password_resets_placeholder) %>
+	    <%= f.button :submit, (t :password_resets_btn), class: 'btn btn-default-submit btn-primary' %>
+	  <% end %>
+  </div>

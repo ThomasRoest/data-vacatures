@@ -1,0 +1,29 @@
+en:
+#form fields
+  simple_form:
+    labels:
+      post:
+        title: "Company"   
+    placeholders:
+      post:
+        title: "Enter Post title"
+        topic: "Select Topic" 
+        video_url: "Video url"     
+  helpers:
+   submit:
+     post:
+       create: "Post"
+       update: "Edit"
+#other
+  posts_new_markdown: "Use Markdown"
+  posts_index_newpost: "Add a new post!"
+  posts_index_noposts: "Go top the topics page to follow topics!"
+  posts_index_noposts_jobs: "Or go to the jobs page!"
+  posts_index_noposts_btn: "Go to topics"
+  posts_index_noposts_btn_jobs: "Go to jobs"
+  posts_show_posted_in: "Posted in "
+  posts_show_btnback: "Go Back"
+  posts_edit_title: "Edit post jo"
+
+  
+

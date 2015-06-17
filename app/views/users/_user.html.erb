@@ -1,0 +1,11 @@
+
+<li class="media attribution media-user-index">
+	<%= link_to (image_tag user.avatar.url(:medium), class: "img img-round img-medium img-link"), user %>
+	<div class="media-body">
+		<h2><%= link_to user.name, user, class: "s-hover-link" %></h2>
+			<% if current_user.admin? && !current_user?(user) %>
+		| 	<%= link_to "delete", user, method: :delete,
+									data: { confirm: "You sure?"} %>
+		<% end %>
+	</div>
+</li>

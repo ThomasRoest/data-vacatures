@@ -1,0 +1,126 @@
+.media, .media-body {
+	overflow: hidden;
+	_overflow:visible;
+	zoom:1;
+}
+
+.media .img {
+	float:left; margin-right: 10px;
+}
+
+.media .img img {
+	display: block;
+}
+
+.media .imgExt {
+	float: right;
+	margin-left: 10px;
+}
+
+.border-bottom {
+	border-bottom: 1px solid $light-grey;
+}
+
+// specific media items
+
+.media-topic-index {
+	max-width: 792px;
+	margin: 1em;
+	border-radius: 3px;
+	h2 {
+		font-size: 1.5em;
+		margin-left: 1.2em;
+	}
+	span {
+		margin-left: 1.7em;
+	}
+}
+
+.media-page-header {
+	color: #fff;
+	background-color: #3F51B5;
+	padding: 0.7em;
+	border-radius: 3px;
+	h1 {
+		float: left;
+		font-size: 1.6em;
+		margin-top: 0.3em;
+		margin-left: 0.2em;
+		color: #fff;
+		text-shadow: 1px 4px 4px #000;
+	}
+	.btn {
+		float: right;
+		margin-top: 5px;
+		padding: 5px 5px;
+		max-width: 145px;
+	}
+}
+
+.media-jobs-list {
+	border-top: 1px solid $light-grey;
+	border-radius: 3px;
+	padding: 0.50em;
+	&:last-child {
+		border-bottom: 1px solid $light-grey;
+	}
+	h2 {
+		margin: 2px 0 2px 5px;
+	}
+	span {
+		margin-top: 7px;
+		margin-left: 5px;
+		color: #9E9E9E;
+	}
+	img {
+		margin-top: 0.4em;
+		width: 40px;
+		border-radius: 3px;
+		border: 1px solid $light-grey;
+	}
+}
+
+.touch-title {
+	color: #1A237E;
+	&:hover {
+		color: #777777;
+	}
+	&:active {
+		color: #777777;
+	}
+	&:focus {
+		color: #777777;
+	}
+}
+
+.media-user-index {
+	margin-top: 0.75em;
+}
+
+
+.media-show-editor {
+	color: #fff;
+	padding: 0.5em;
+	border-radius: 3px;
+	
+  	.media-body {
+  		span {
+  			margin-top: 15px;
+  			font-weight: bold;
+  			a {
+  			  color: #fff;	
+  			}
+  		}
+  	}
+}
+
+
+@media screen and(min-width: 768px) {
+	.media-topic-index {
+		padding: 0.75em;
+		margin: 1em auto;
+		border: 1px solid $light-grey;
+		box-shadow: 1px 1px 5px #cccccc;
+		
+	}
+}

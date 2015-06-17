@@ -1,0 +1,41 @@
+.panel {
+  margin: 0 auto 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.panel-small {
+  max-width: 600px;
+}
+.panel-medium {
+  max-width: 750px;
+}
+.panel-large {
+  max-width: 950px;
+}
+.panel-heading {
+  padding: 20px;
+  h1 {
+    margin: 0;
+  }
+  border-bottom: 1px solid #ddd;
+}
+
+.panel-heading-default {
+  background: #fff;
+  color: #333;
+}
+.panel-body {
+  padding: 15px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.panel-footer {
+  padding: 15px;
+  background: #ECEFF1;
+}
+
+@media (min-width: 768px){
+  .panel-heading {
+    padding: 45px;
+  }
+}

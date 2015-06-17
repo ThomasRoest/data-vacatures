@@ -1,0 +1,24 @@
+<div class="box l-generic">
+	<ul class="ul-basic ul-nostyle">
+		<li><h1>Sollicitatie voor vacature: <%= link_to @jobapplication.job.title, @jobapplication.job %></h1></li>
+		<li><strong>Datum:</strong> <%= time_tag(@jobapplication.created_at) %></li>
+		<li><strong>Naam:</strong> <%= @jobapplication.name %></li>
+	  <li><strong>Email:</strong> <%= @jobapplication.email %></li>
+    <% if @jobapplication.linkedin_url? %>
+      <li><%= icon('linkedin') %> Linkedin profiel <%= link_to @jobapplication.linkedin_url, @jobapplication.linkedin_url %></li>
+    <% end %>
+    <hr>
+	    
+	   <li><strong>Motivatie:</strong> <%= @jobapplication.content %></li>
+	</ul>
+	<ul class="ul-basic ul-nostyle">
+		<% unless !@jobapplication.cv.exists? %>
+		  <li><h3><%= link_to 'Download CV', @jobapplication.cv.url %><h3></li>
+		<% end %>
+		<% unless !@jobapplication.letter.exists? %>
+		  <il><h3><%= link_to 'Download motivatiebrief', @jobapplication.letter.url %></h3></li>
+		<% end %>
+	</ul>
+	<%#= debug params %>
+	
+</div>

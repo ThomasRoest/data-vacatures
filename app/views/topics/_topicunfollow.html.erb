@@ -1,0 +1,4 @@
+<%= form_for(current_user.toprelations.find_by(topic_followed_id: @topic.id),             html: { method: :delete },
+				 remote: true) do |f| %>
+  <%= f.submit (t :topics_show_unfollow), class: "btn" %>
+<% end %>
