@@ -126,7 +126,7 @@
 .l-box-courses {
   background-color: #fff;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 	.l-profile-feed {
 		padding-left: 2em;
 		padding-right: 2em;
@@ -164,6 +164,12 @@
   	h3 {
   		font-size: 1.5em;
   	}
+  }
+}
+
+@media screen and (min-width: 1150px){
+  .l-page-header-offset {
+    padding: 1em 0em 5em 0em;
   }
 }
 

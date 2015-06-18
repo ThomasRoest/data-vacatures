@@ -14,11 +14,11 @@
           <button type="submit" class="btn btn-search btn-search-margin"><%= icon('search') %></button>
         <% end %>
       </div>
+      <br/>
       <div class="box">
         <ul class="ul-topic-sort">
-          <li>Onderwerp: </li>
         <% @topics.each do |t| %>
-          <li><%= link_to t.name, posts_path(topic: t.id) %></li> |
+          <li><%= link_to t.name, posts_path(topic: t.id), class: 'btn btn-small btn-transparent-white' %></li> 
         <% end %>
         </ul>
       </div>
