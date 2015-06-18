@@ -30,15 +30,13 @@
         <%= link_to icon('twitter'), 'https://twitter.com/datavacature' %>
         <%= link_to icon('linkedin'), 'https://www.linkedin.com/company/datavacature-nl' %>
       </li>
-  
+      <li>  
+        <%= button_to free_subscriptions_path, class: 'btn btn-default btn-primary' do %>
+          Plaats een gratis vacature 
+          <%= icon('plus', '', class: 'icon-plus-subscription') %>
+        <% end %>
+      </li>
     </ul>
-    <div class="text-center l-free-job">
-
-      <%= simple_form_for @free_subscription do |f| %>
-      <%= f.button :submit, 'Plaats een vacature', class: "btn btn-default-submit btn-large btn-primary" %>
-      <% end %>
-
-    </div>
     <br/>
    
   </div>

@@ -1,7 +1,7 @@
 class FreeSubscriptionsController < ApplicationController
 
   def new
-    @free_subscription = FreeSubscription.new
+    # @free_subscription = FreeSubscription.new
   end
 
   def create
