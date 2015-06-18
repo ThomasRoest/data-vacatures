@@ -5,5 +5,6 @@ User-agent: *
 Disallow: /privacycookies
 Disallow: /account_activations/new
 Disallow: /sollicitaties
+Disallow: /gratis-vacature-plaatsen
 Sitemap: https://www.datavacature.nl/sitemap.xml.gz
 

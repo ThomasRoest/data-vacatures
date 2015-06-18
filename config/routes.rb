@@ -26,7 +26,7 @@ end
 
   match 'gratis-vacature/:guid',      to: 'jobs#new_free',          via: 'get',     as: :freejob
   match 'gratis-vacature/:guid',      to: 'jobs#create_free',       via: 'post',    as: :create_freejob
-  match 'gratis-vacature-plaatsen',   to: 'static_pages#new_free',  via: 'get',     as: :free_subscription_page
+  match 'gratis-vacature-plaatsen',   to: 'free_subscriptions#new', via: 'get'
 
   
   localized do 
@@ -47,7 +47,7 @@ end
 
   localized do 
     resources :subscriptions, only: [:index, :new, :create, :destroy]
-    resources :free_subscriptions, only: [:new]
+    resources :free_subscriptions, only: [:new, :create]
   end
   
   root 'static_pages#home'

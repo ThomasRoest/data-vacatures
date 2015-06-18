@@ -1,0 +1,51 @@
+<% provide(:title, (t :pricing_title)) %>
+<% meta description: (t :description_subscriptions) %>
+
+
+<div class="l-page-header l-page-header-offset pageheader-background-blue">
+  <div class="box-large">
+    <h1 class="h1-sub-index">
+      Plaats een gratis vacature
+      <%= icon('pencil-square-o', '',class: 'icon-pencil-subscriptions') %>
+    </h1>
+  </div>
+</div>
+
+
+<div class="panel panel-large l-box-offset">
+
+  <div class="panel-body">  
+    <ul class='ul-nostyle ul-basic list-left ul-product-usp'>
+      <li>
+        <%= icon('check-circle', '', class: 'icon-green' ) %>
+        Bereik data-specialisten &amp; professionals
+      </li>
+      <li>
+        <%= icon('check-circle', '', class: 'icon-green' ) %>
+        Eenvoudig en snel vacatures plaatsen en beheren
+      </li>
+      <li>
+        <%= icon('check-circle', '', class: 'icon-green' ) %>
+        Gedeeld op social media
+        <%= link_to icon('twitter'), 'https://twitter.com/datavacature' %>
+        <%= link_to icon('linkedin'), 'https://www.linkedin.com/company/datavacature-nl' %>
+      </li>
+  
+    </ul><br>
+    <div class="text-center">
+
+      <%= simple_form_for @free_subscription do |f| %>
+      <%= f.button :submit, 'Plaats een gratis vacature', class: "btn btn-transparent-blue" %>
+      <% end %>
+
+    </div>
+    <br/>
+   
+  </div>
+
+  <div class="panel-footer">
+    <div class="text-center">
+      <%= link_to icon('envelope-o', 'Vragen? Stuur ons een bericht!'), contact_path, class: 'btn btn-default btn-transparent btn-margin-top' %>
+    </div>
+  </div>
+</div>
