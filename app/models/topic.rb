@@ -13,7 +13,7 @@ class Topic < ActiveRecord::Base
 	validates :name, presence: true, uniqueness: true
 	validates :id, uniqueness: :true
 
-	# default_scope { order('created_at DESC')}
+	default_scope { order('created_at DESC')}
 
 	 def slug
     	name.downcase.parameterize
