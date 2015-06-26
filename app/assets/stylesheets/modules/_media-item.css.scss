@@ -80,6 +80,32 @@
 	}
 }
 
+.media-courses-list {
+	border-top: 1px solid $light-grey;
+	border-radius: 3px;
+	padding: 0.50em;
+	&:last-child {
+		border-bottom: 1px solid $light-grey;
+	}
+	h2 {
+		margin: 2px 0 2px 5px;
+	}
+	p {
+		margin: 5px 0 5px 5px;
+	}
+	span {
+		margin-top: 7px;
+		margin-left: 5px;
+		color: #9E9E9E;
+	}
+	img {
+		margin-top: 0.4em;
+		width: 40px;
+		border-radius: 3px;
+		border: 1px solid $light-grey;
+	}
+}
+
 .touch-title {
 	color: #1A237E;
 	&:hover {

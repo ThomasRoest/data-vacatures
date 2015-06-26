@@ -15,12 +15,17 @@
     <%= select_tag(:sort, options_for_select(course_categories),prompt: 'sorteren', id: 'sortform-courses-select', class: 'sort-select') %>
   <% end %>
 
-
-<div class="grid-container" id="course-grid">
-
-  <%= render @courses %>
-  <%= paginate @courses, :window => 2 %>
+  <div class="l-feed-list" id="feed-list-courses">
   
-</div><!--end container-->
+      <%= render @courses %>
+     
+
+      <%= paginate @courses, :window => 2 %>
+  
+  </div>
+
+  
+  
+
 </div> 
 

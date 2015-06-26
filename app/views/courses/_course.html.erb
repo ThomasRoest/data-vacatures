@@ -1,4 +1,34 @@
-<div class="grid-4 grid-margin-3column l-grid-course-colors">
+
+
+        <div class="media attribution media-courses-list touch-item-jobs touch-hover">
+          <%#= link_to 'img', course.course_url, class: 'img img-link' %>
+          <div class="media-body">
+            <h2><%= link_to course.title, course.course_url, class: 'touch-title' %></h2> 
+            <p><%= course.description %> |</p>
+            <span><%= icon('graduation-cap', course.company) %> |</span>
+            <span><%= icon('bookmark', course.category) %></span>
+            <span><%#= icon('clock-o', j.job_type) %><%= link_to course.title, course.course_url, class: "showpost-link" %></span>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="grid-4 grid-margin-3column l-grid-course-colors">
   <div class="l-grid-course">
     
     <div class="l-grid-course-img">
@@ -18,4 +48,4 @@
     </div>
   </div>
 </div>
-  
+   -->
