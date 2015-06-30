@@ -5,7 +5,7 @@
     padding: 0;
     top: 0;
     width: 100%;
-    background-color: #FFF;
+    background-color: #0091ea;
     color: #fff;
     border-bottom: 1px solid $light-grey;
     height: 3.6em;
@@ -78,7 +78,9 @@
 .nav-li-menu {
   height: 48px;
   border-left: 1px solid $light-grey;
-  color: #2c3e50;
+  // color: #2c3e50;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
   padding: 1em 0.5em 1em 0.5em;
   font-weight: bold;
 }
@@ -86,7 +88,8 @@
 .nav-li-menu-signedin {
   height: 48px;
   border-left: 1px solid $light-grey;
-  color: #2c3e50;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
   // padding: 1em 0.7em 1em 0.7em;
   padding: 1em 0.6em 1em 0.6em;
   font-weight: bold;
@@ -126,6 +129,9 @@
 
 
 @media screen and (min-width: 768px){
+  .l-main-header {
+    border-bottom: 0px;
+  }
     
  .mobile-nav {
     display: none;
@@ -218,9 +224,10 @@
 .dropdown-li-icon {
   /* // width: 65px;*/
    width: 150px;
-   color: #2c3e50;
+   color: #fff;
+   text-shadow: 1px 1px 1px #000;
    /*margin-left: ;*/
-   background-color: #fff;
+   background-color: #0091ea;
    &:hover {
     color: aqua;
    }

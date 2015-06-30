@@ -17,13 +17,15 @@
   width: 65px;
   height: 3.5em;
   padding: 0.5em;
-  color: #3F51B5;
+  text-shadow: 1px 1px 1px #000;
+  // color: #3F51B5;
+  color: #fff;
 }
 .nav-li-logo {
     img {
       height: 3.5em;
       border-right: 1px solid $light-grey;
-      border-bottom: 1px solid $light-grey;
+      // border-bottom: 1px solid $light-grey;
     }
 }
 
