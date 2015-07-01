@@ -24,7 +24,7 @@
       <div class="box">
         <ul class="ul-topic-sort">
         <% @topics.each do |t| %>
-          <li><%= link_to t.name, posts_path(topic: t.id), class: 'btn btn-small btn-transparent-blue' %></li> 
+          <li><%= link_to t.name, posts_path(topic: t.id), class: 'btn btn-xs btn-transparent-light' %></li> 
         <% end %>
         </ul>
       </div>

@@ -41,6 +41,11 @@ border-radius: 3px;
   width: 100%;
 }
 
+.btn-xs {
+  padding: 2px;
+  font-size: 0.8em;
+}
+
 .btn-small {
   padding: 4px;
   min-width: 7em;
@@ -206,6 +211,23 @@ border-radius: 3px;
     background-color: #3F51B5;
   }
 }
+
+.btn-transparent-light {
+  color: #ccc;
+  border: 1px solid #ccc;
+  
+  &:hover {
+    color: $light-grey;
+    background-color: #3F51B5;
+  }
+  &:active {
+    background-color: #3F51B5;
+  }
+  &:focus {
+    background-color: #3F51B5;
+  }
+}
+
 
 /*specific*/
 .btn-bold {

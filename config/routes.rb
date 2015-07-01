@@ -26,7 +26,7 @@ end
 
   match 'gratis-vacature/:guid',      to: 'jobs#new_free',          via: 'get',     as: :freejob
   match 'gratis-vacature/:guid',      to: 'jobs#create_free',       via: 'post',    as: :create_freejob
-  match 'gratis-vacature-plaatsen',   to: 'free_subscriptions#new', via: 'get'
+  match 'gratis-vacature-plaatsen',   to: 'free_subscriptions#new', via: 'get',     as: :gratis
 
   
   localized do 
