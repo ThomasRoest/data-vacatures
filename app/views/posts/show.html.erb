@@ -1,7 +1,8 @@
 <% provide(:title, @post.title)%>
 <% meta description: @post.title %>
 
-<div class="box l-posts-show-header background-lightblue">
+<div class="l-posts-show-header background-lightblue">
+  <div class="container-default">
   <p class="timestamp topic-link">
     <%= (t :posts_show_posted_in) %>
     <strong><%= link_to @post.topic.name, @post.topic, class: "s-hover-link" %></strong>
@@ -21,6 +22,7 @@
           </span>
       </div>
     </div>
+  </div>
 </div>
 
 <div class="box l-show-post l-box-shadow">

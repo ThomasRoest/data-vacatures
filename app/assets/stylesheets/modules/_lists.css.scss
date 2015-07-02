@@ -66,6 +66,14 @@
     border-bottom: $simple-border;
   }
 }
+
+.main-feed-list {
+  li {
+  &:first-child {
+    border-top: $simple-border;
+  }  
+  }
+}
 .job-opening {
   list-style: none;
   margin: 0px;
@@ -157,7 +165,7 @@
     margin-bottom: 2em;
   }
   .ul-topic-sort {
-    margin: 10px 10px 10px 10px;
+    margin: 0px 0px 0px 10px;
     padding-top: 10px;
   }
 }
