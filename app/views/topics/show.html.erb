@@ -1,15 +1,14 @@
 <% provide(:title, @topic.name) %>
 <% meta description: @topic.name + " nieuws en artikelen" %>
 
-<div class="box">
   <div class="media attribution media-page-header">
+    <div class="container-default">
 		<%= image_tag(@topic.avatar.url(:thumb), class: "img img-round")%>
      <div class="media-body">
 	     <h1><%= @topic.name %></h1><%= render 'topicfollow_form' if signed_in? %>
 		 </div>
+     </div>
   </div>
-</div>
-
 
 <div class="box l-main-feed">
 	

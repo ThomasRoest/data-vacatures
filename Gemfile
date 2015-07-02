@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 # source 'https://code.stripe.com'
 ruby '2.1.2'
 
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.11'
 
 gem 'sass-rails', '4.0.2'
 gem 'coffee-rails', '4.0.1'
