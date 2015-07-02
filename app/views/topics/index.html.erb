@@ -1,16 +1,12 @@
 <% provide(:title, 'Nieuws en Artikelen') %>
 <% meta description: (t :description_topics) %>
-	
-		<div class="box l-page-header pageheader-background-blue">
-      <h1 id="h1-margin-left" class="text-inline h1-margin-left">Onderwerpen</h1>
-
-			
-			
-
+	<div class="l-page-header pageheader-background-blue">
+		<div class="container-default">
+			<h1>Onderwerpen</h1>
 		</div>
+	</div>
 		
-     <div class="box l-topic-index">
-	  
+  <div class="container-default l-topic-index">  
 			<% @topics.each do |topic| %>
 				<div class="media attribution media-topic-index">
 					<%= link_to (image_tag topic.avatar.url(:medium), class: "img img-medium img-link"), topic %>
@@ -23,7 +19,6 @@
 						</div>
 				</div>
 			<% end %>
-			
 	</div>
 
 
