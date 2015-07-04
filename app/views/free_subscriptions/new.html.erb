@@ -2,23 +2,20 @@
 <% meta description: (t :description_subscriptions) %>
 
 
-<div class="l-page-header l-page-header-offset pageheader-background-blue">
-  <div class="box-large">
-    <h1 class="h1-sub-index">
-      Plaats een gratis vacature
-      <%= icon('pencil-square-o', '',class: 'icon-pencil-subscriptions') %>
-    </h1>
+<div class="l-page-header-product pageheader-img-product">
+  <div class="container">
+    <h1>Bereik meer met data</h1>
+    <h2>Vind data-specialisten via Datavacature.nl</h2>
+      <%= button_to free_subscriptions_path, class: 'btn btn-default btn-success' do %>
+        <%= icon('plus-circle', '', class: 'icon-plus-subscription') %>
+          Plaats nu een gratis vacature
+      <% end %>
   </div>
 </div>
 
-
-
-<div class="panel panel-large l-box-offset">
-
-  <div class="panel-body">  
-
-    <ul class='ul-nostyle ul-basic list-left ul-product-usp'>
-      <li><h1>Plaats je vacature deze maand gratis op Datavacature.nl</h1></li>
+<div class="background-white">
+  <div class="container l-product-content">
+    <ul class='ul-nostyle ul-basic ul-product-usp'>
       <li>
         <%= icon('check-circle', '', class: 'icon-green' ) %>
         Bereik data-specialisten &amp; professionals
@@ -33,18 +30,31 @@
         <%= link_to icon('twitter'), 'https://twitter.com/datavacature' %>
         <%= link_to icon('linkedin'), 'https://www.linkedin.com/company/datavacature-nl' %>
       </li>
-      <li><br/> 
-        <%= button_to free_subscriptions_path, class: 'btn btn-default btn-primary' do %>
-        <%= icon('plus-circle', '', class: 'icon-plus-subscription') %>
-          Plaats een vacature
-        <% end %>
+      <li>
+        <%= icon('check-circle', '', class: 'icon-green' ) %>
+        Deze maand gratis!
       </li>
     </ul>
-  </div>
-
-  <div class="panel-footer">
     <div class="text-center">
-      <%= link_to icon('envelope-o', 'Vragen? Stuur ons een bericht!'), contact_path, class: 'btn btn-default btn-transparent btn-margin-top' %>
+      <a class="btn btn-default btn-transparent btn-margin-top" href="/contact">
+        Vragen? Stuur ons een bericht!
+        <%= icon('envelope-o') %>
+      </a>
     </div>
   </div>
 </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+

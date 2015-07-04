@@ -93,6 +93,8 @@
   }
 }
 
+
+
 .pageheader-background-purple {
    background: #9C27B0 image-url('dv_2_h160px.png') no-repeat center center;
   -webkit-background-size: cover;
@@ -119,6 +121,14 @@
 
 .pageheader-background-blue-job {
   background: #2196F3 image-url('dv_2_h160b20.png') center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pageheader-img-product {
+  background: #2196F3 image-url('data_blue_medium-min.jpg') center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
