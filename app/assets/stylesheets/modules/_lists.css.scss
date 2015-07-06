@@ -108,7 +108,10 @@
 }
 
 .ul-product-usp {
-  margin: 0 auto;
+  margin: 0 auto 20px;
+  border: $simple-border;
+  padding-left: 1em;
+  border-radius: 3px;
   li {
     font-size: 1.1em;
     padding-top: 1em;
