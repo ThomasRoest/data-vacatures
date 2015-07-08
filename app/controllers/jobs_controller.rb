@@ -1,9 +1,10 @@
 class JobsController < ApplicationController 
-	 before_action :signed_in_user, only: [:new, :new_free, :create, :create_free, :edit, :update, :destroy]
+	 before_action :signed_in_user, only: [:new, :create, :create_free, :edit, :update, :destroy]
 	 before_action :correct_user, only: [:edit, :destroy]
 	 before_action :check_guid, only: [:new]
    before_action :check_free_guid, only: [:new_free, :create_free]
    before_action :check_free_job, only: [:new_free, :create_free]
+   before_action :signup_redirect, only: [:new_free]
 	
 	def index
 		@jobs = Job.all
@@ -107,10 +108,9 @@ class JobsController < ApplicationController
     end
   end
 
-  #  @free_subscription = FreeSubscription.find_by!(guid: params[:guid])
-   # # the ! is needed to raise the error if not found
-  #  rescue ActiveRecord::RecordNotFound
-  #   flash[:error] = "Deze link is niet geldig"
-  #   redirect_to jobs_path
-  # end
+  def signup_redirect
+    unless signed_in?
+      redirect_to signup_path
+    end
+  end
 end
