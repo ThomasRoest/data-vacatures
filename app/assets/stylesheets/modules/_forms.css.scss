@@ -16,9 +16,16 @@
 }
 .form-panel-job {
   margin: 0 auto 0.5em;
-  max-width: 650px;
+  max-width: 750px;
   border: 1px solid #ddd;
   border-radius: 3px;
+  input {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+.form-panel-large {
+  max-width: 750px;
 }
 
 .form-panel-heading {
@@ -55,8 +62,8 @@
 }
 .input-default {
   border-radius: 3px;
-  margin-top: 8px;
-  margin-bottom: 15px;
+  margin-top: 0.3em;
+  margin-bottom: 1.5em;
   display: block;
 }
 .label-margin {
