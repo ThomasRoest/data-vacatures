@@ -21,6 +21,8 @@
 .nav-li-logo {
     img {
       height: 3.5em;
+      // border-right: 1px solid $light-grey;
+      // border-bottom: 1px solid $light-grey;
     }
 }
 
@@ -48,6 +50,7 @@
 
 .share-buttons {
   text-align: right;
+  margin-bottom: 2em;
   a {
     &:hover {
       text-decoration: none;  

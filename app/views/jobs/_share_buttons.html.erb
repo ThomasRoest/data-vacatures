@@ -1,0 +1,13 @@
+   <section class="share-buttons">
+
+
+          <a href="<%= "http://twitter.com/home?status=" + job_url(id: @job) %>">
+            <%= icon('twitter', '',class: 'icon-sharebutton') %>
+          </a>
+      
+
+           <a href="<%= "http://www.linkedin.com/shareArticle?mini=true&url=" + job_url(id: @job) + "&title=" + @job.title + " | " + @job.company + "&source=" + "https://datavacature.nl" %>">
+            <%= icon('linkedin', '',class: 'icon-sharebutton') %>
+           </a>  
+
+       </section>
