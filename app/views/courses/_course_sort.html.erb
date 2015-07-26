@@ -1,0 +1,3 @@
+ <%= form_tag(courses_path, method: 'get', remote: true, id: 'sortform-courses', class: 'search-form-container') do %>  
+    <%= select_tag(:sort, options_for_select(course_categories),prompt: 'sorteren', id: 'sortform-courses-select', class: 'sort-select') %>
+  <% end %>
